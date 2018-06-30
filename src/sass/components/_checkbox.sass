@@ -1,0 +1,51 @@
+.checkbox
+	position: relative
+	display: inline-block
+	vertical-align: top
+	min-width: 24px
+	min-height: 24px
+	&__input
+		display: none
+		&:checked
+			~ .checkbox
+				&__icon
+					background: $lightGrayDarker
+					.checkbox__icon-in 
+						opacity: 1
+				&__content
+					font-weight: 700
+		&:disabled
+			~ .checkbox
+				&__icon,
+				&__content
+					opacity: 0.7
+					cursor: not-allowed
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		border: 1px solid $lightGrayDarker
+		width: 24px
+		height: 24px
+		background: $white
+		cursor: pointer
+		transition: background 0.3s, opacity 0.3s
+		&-in
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			transition: opacity 0.3s
+	&__content
+		display: block
+		padding-left: 42px
+		font-family: $familySecondary
+		+f(16px, 400, 1.5)
+		cursor: pointer
+		transition: opacity 0.3s
+	&__subtitle,
+	&__title
+		display: inline-block
+		vertical-align: top
+	&__subtitle
+		color: #666

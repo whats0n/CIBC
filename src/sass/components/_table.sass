@@ -1,0 +1,53 @@
+=col($name)
+	&[data-column*="#{$name}"]
+		@content
+
+.table
+	display: table
+	table-layout: fixed
+	width: 100%
+	&__thead
+		display: table-header-group
+		background: #F5F5F5
+	&__tbody
+		display: table-row-group
+	&__tr
+		display: table-row
+	&__td,
+	&__th
+		display: table-cell
+		vertical-align: top
+		+col('product-name')
+			width: 38%
+		+col('fundserv')
+			width: 13%
+		+col('available-until')
+			width: 17%
+		+col('term')
+			width: 12%
+		+col('compare')
+			width: 20%
+	&__th
+		padding: 18px 18px 17px
+		border-top: 1px solid $lightGrayDarker
+		border-bottom: 1px solid $lightGrayDarker
+		font-size: 0
+	&__td
+		padding: 14px 18px
+		border-bottom: 1px solid $lightGrayDarker
+	&__arrow
+		margin-top: 3px
+		margin-left: 10px
+		font-size: 16px
+	&__heading
+		+f(16px, 700, 20px)
+	&__help
+		margin-top: 3px
+		margin-left: 10px
+	&__heading,
+	&__arrow,
+	&__help
+		display: inline-block
+		vertical-align: top
+	.checkbox
+		margin-top: 4px

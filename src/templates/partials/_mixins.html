@@ -3,7 +3,7 @@
 {% endmacro %}
 
 {% macro item(props) %}
-	<div class="item">
+	<div class="item {{props.classList}}">
 		<div class="item__figure">
 			<div class="item__figure-in">
 				{% if props.logo %}
@@ -19,6 +19,9 @@
 				{% endif %}
 				{% if props.img %}
 					<div class="item__img" style="background-image: url(img/{{props.img.src or 'item-placeholder'}}.jpg);"></div>
+				{% endif %}
+				{% if props.placeholder %}
+					<div class="item__placeholder"></div>
 				{% endif %}
 			</div>
 		</div>
@@ -50,4 +53,17 @@
 			<a href="#" class="link link_lg">{{props.link}}</a>
 		</div>
 	</div>
+{% endmacro %}
+
+{% macro checkbox(props) %}
+	<label class="checkbox">
+		<input type="checkbox" class="checkbox__input" {{props.attrs | safe}}>
+		<span class="checkbox__icon"><i class="material-icons checkbox__icon-in">check</i></span>
+		{% if props.title or props.subtitle %}
+			<span class="checkbox__content">
+				<span class="checkbox__title">{{props.title}}</span>
+				<span class="checkbox__subtitle">{{props.subtitle}}</span>
+			</span>
+		{% endif %}
+	</label>
 {% endmacro %}

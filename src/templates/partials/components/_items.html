@@ -1,9 +1,11 @@
 <!-- begin items -->
 <div class="items">
 	<div class="inner items__inner">
-		<h2 class="title-lg title-lg_regular items__title">Lorem ipsum dolor sit amet.</h2>
+		{% if not items.noTitle %}
+			<h2 class="title-lg title-lg_regular items__title">Lorem ipsum dolor sit amet.</h2>
+		{% endif %}
 		<div class="items__row">
-			{% for item in [
+			{% for item in items.columns or [
 				{
 					title: 'Notes in a nusthell (0:47).',
 					description: 'Need more information about notes? Our <a href="#" class="link link_inherit">Education Centre</a> will bring you up to speed. ',
@@ -32,7 +34,7 @@
 					img: { src: 'item-1' }
 				}
 			] %}
-				<div class="items__col">
+				<div class="items__col {{items.columnClassList}}">
 					{{mixins.item(item)}}
 				</div>
 			{% endfor %}
