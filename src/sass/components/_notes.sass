@@ -1,10 +1,20 @@
 .notes
 	&__container
 		position: relative
+		padding: 58px 0 23px
 		margin: 0 auto
 		max-width: 1366px
 		color: $white
 		+cover
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0.7
+			background: $black
 	&__row
 		margin: 0 -8px
 		+clr
@@ -12,3 +22,21 @@
 		float: left
 		padding: 8px
 		width: 33.33%
+	&__title
+		margin-bottom: 13px
+	&__subtitle
+		margin-bottom: 37px
+	&__nav
+		margin: 0 -10px
+		+clr
+	&__prev
+		float: left
+	&__next
+		float: right
+	&__prev,
+	&__next
+		color: $white
+		background: none
+		font-size: 0
+		i 
+			font-size: 36px

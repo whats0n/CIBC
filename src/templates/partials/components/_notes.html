@@ -7,28 +7,36 @@
 			<div class="notes__row">
 				{% for item in [
 					{
-						label: 'MLGIC',
-						title: 'Consectetuer elit sed diam.',
-						description: 'Our MLGIC notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
-						link: 'See MLGIC offerings'
+						label: 'Available until April 13, 2018',
+						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+						link: 'See Note details'
 					},
 					{
-						label: 'PPN',
-						title: 'Protect my initial investment.',
-						description: 'Our PPN notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
-						link: 'See PPN offerings'
+						label: 'Available until April 13, 2018',
+						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+						link: 'See Note details'
 					},
 					{
-						label: 'PAR',
-						title: 'Potential rewards have risks.',
-						description: 'Our PAR notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
-						link: 'See PAR offerings'
+						label: 'Available until April 13, 2018',
+						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+						link: 'See Note details'
 					}
 				] %}
 					<div class="notes__col">
 						{{mixins.card(item)}}
 					</div>
 				{% endfor %}
+			</div>
+			<div class="notes__nav">
+				<button class="notes__prev">
+					<i class="material-icons">chevron_left</i>
+				</button>
+				<button class="notes__next">
+					<i class="material-icons">chevron_right</i>
+				</button>
 			</div>
 		</div>
 	</div>
