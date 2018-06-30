@@ -1,0 +1,16 @@
+---
+title: Index page
+hero: {
+	title: 'Lorem ipsum dolor sit amet consectetuer adipiscing',
+	btn: 'Register Today'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include 'partials/components/_hero.html' %}
+	{% include 'partials/components/_cards.html' %}
+	{% include 'partials/components/_items.html' %}
+
+{% endblock %}

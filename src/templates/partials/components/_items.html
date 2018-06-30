@@ -1,0 +1,39 @@
+<!-- begin items -->
+<div class="items">
+	<div class="inner items__inner">
+		<h2 class="title-lg title-lg_regular items__title">Lorem ipsum dolor sit amet.</h2>
+		<div class="items__row">
+			{% for item in [
+				{
+					title: 'Notes in a nusthell (0:47).',
+					description: 'Need more information about notes? Our <a href="#" class="link link_inherit">Education Centre</a> will bring you up to speed. ',
+					link: 'Read transcript'
+				},
+				{
+					title: 'Read our noteworthy publications',
+					description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ',
+					link: 'See our publications',
+					img: { src: 'item-2' }
+				},
+				{
+					title: 'Lorem Ipsum Dolor (1:11)',
+					description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. ',
+					link: 'Read transcript',
+					logo: true,
+					play: true
+				},
+				{
+					title: 'Let us find a Note that’s right for you',
+					description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit,. ',
+					link: 'Get started',
+					img: { src: 'item-1' }
+				}
+			] %}
+				<div class="items__col">
+					{{mixins.item(item)}}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end items -->

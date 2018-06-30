@@ -1,0 +1,39 @@
+.logo
+	float: left
+	font-size: 0
+	&__img
+		height: 70px
+
+.header
+	font-family: $familySecondary
+	&__inner
+		padding-top: 15px
+		padding-bottom: 15px
+	&__right
+		float: right
+		padding: 15px 0
+		width: 80%
+	&__list
+		float: right
+		padding-left: 20px
+		font-size: 0
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__item
+		padding: 12px 15px
+		&:not(:last-child)
+			border-right: 1px solid #D6D6D6
+	&__search
+		float: right
+	&__label
+		float: right
+		padding: 2px 0
+		margin-right: 40px
+		width: 180px
+		color: $red
+		font-family: $familyPrimary
+		+f(18px, 600, 1)
+		letter-spacing: 0.04em
+		text-transform: uppercase

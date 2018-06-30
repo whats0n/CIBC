@@ -1,0 +1,31 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro item(props) %}
+	<div class="item">
+		<div class="item__figure">
+			<div class="item__figure-in">
+				{% if props.logo %}
+					<div class="item__logo">
+						<img src="img/logo.svg" alt="CIBC" class="item__logo-img">
+						{% if props.logoText %}
+							<div class="item__logo-label">CIBC Structured&nbsp;Notes</div>
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if props.play %}
+					<a href="#" class="item__play"></a>
+				{% endif %}
+				{% if props.img %}
+					<div class="item__img" style="background-image: url(img/{{props.img.src or 'item-placeholder'}}.jpg);"></div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="item__content">
+			<h3 class="title-md item__title">{{props.title}}</h3>
+			<div class="item__description">{{props.description | safe}}</div>
+			<a href="#" class="link link_lg item__link">{{props.link}}</a>
+		</div>
+	</div>
+{% endmacro %}

@@ -1,0 +1,51 @@
+<!-- begin header -->
+<header class="header">
+	<div class="submenu">
+		<div class="inner submenu__inner">
+			<ul class="submenu__list">
+				{% for item in [
+					{ title: 'CIBC Capital Markets' },
+					{ title: 'CIBC Websites' }
+				] %}
+					<li class="submenu__item"><a href="#" class="submenu__link">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+			<a href="#" class="submenu__link submenu__lang"><img src="img/flag-canada.svg" alt="/" class="submenu__icon">English</a>
+		</div>
+	</div>
+	<div class="inner header__inner">
+		<a href="#" class="logo">
+			<img src="img/logo.svg" alt="CIBC" class="logo__img">
+		</a>
+		<div class="header__right">
+			<ul class="header__list">
+				{% for item in [
+					{ title: 'Contact Us' },
+					{ title: 'Sign On' }
+				] %}
+					<li class="header__item"><a href="#" class="link header__link">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+			<div class="search header__search">
+				<input type="text" class="search__input" placeholder="Search">
+				<button class="search__btn"><i class="material-icons search__icon">search</i></button>
+			</div>
+			<div class="header__label">CIBC Structured&nbsp;Notes</div>
+		</div>
+	</div>
+	<nav class="nav">
+		<div class="inner nav__inner">
+			<ul class="nav__list">
+				{% for item in [
+					{ title: 'Current Offerings' },
+					{ title: 'Previous Issued' },
+					{ title: 'Education Centre' },
+					{ title: 'Publications' }
+				] %}
+					<li class="nav__item"><a href="#" class="nav__link">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- end header -->

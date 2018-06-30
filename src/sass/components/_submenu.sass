@@ -1,0 +1,31 @@
+.submenu
+	background: $lightGray
+	font-family: $familySecondary
+	font-size: 0
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+		text-decoration: none
+	&__link
+		position: relative
+		padding: 13px 15px
+		border-right: 1px solid $lightGrayDarker
+		color: #666666
+		+f(14px, 400, 1)
+		transition: background 0.3s
+		+hover 
+			background: #dedede
+	&__list
+		float: left
+		border-left: 1px solid $lightGrayDarker
+	&__lang
+		float: right
+		padding-left: 48px
+		border-left: 1px solid $lightGrayDarker
+	&__icon
+		position: absolute
+		top: 50%
+		left: 10px
+		height: 15px
+		transform: translateY(-50%)

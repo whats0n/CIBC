@@ -1,0 +1,172 @@
+.footer
+	color: $white
+	background: $gray
+	&__inner
+		max-width: 1240px
+	&__controls
+		padding: 50px 0 35px
+		border-bottom: 1px solid #535353
+		+clr 
+	&__row
+		margin: 0 -10px
+		+clr
+	&__col 
+		float: left
+		padding: 0 10px
+		width: 25%
+	&__search
+		float: left
+	&__btn
+		float: right
+	&__item
+		padding: 12px 0
+		font-size: 0
+		+clr
+	&__link
+		position: relative
+		display: inline-block
+		vertical-align: top
+		max-width: 180px
+		color: $white
+		+f(16px, 400, 1.25)
+		text-decoration: none
+		+hover
+			text-decoration: underline
+	&__middle
+		padding: 18px 0
+		border-bottom: 1px solid #535353
+		font-family: $familySecondary
+	&__label
+		float: left
+		margin-right: 15px
+		color: #ccc
+		+f(14px, 400, 16px)
+	&__choices
+		float: left
+		margin: 0 -13px
+	&__choice
+		display: inline-block
+		vertical-align: top
+		padding: 0 13px
+		color: #ccc
+		+f(14px, 400, 16px)
+		text-decoration: none
+		transition: color 0.3s
+		+hover
+			text-decoration: underline
+		&.is-active
+			color: $white
+			font-weight: 700
+		&:not(:last-child)
+			&:after
+				content: '|'
+				margin-right: -13px
+				margin-left: 13px
+				color: #666
+	&__sizes
+		margin: -4px 0 0
+		+clr 
+	&__size 
+		position: relative
+		border-radius: 50%
+		width: 24px
+		height: 24px
+		background: #666
+		transition: background 0.3s
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			background: $gray
+			transform: translate3d(-50%,-50%,0)
+			transition: background 0.3s
+		&:before
+			width: 9px
+			height: 2px
+		&.is-active
+			background: $white
+			&:before,
+			&:after
+				background: $red
+		&:not(:last-child)
+			margin-right: 20px
+	&__plus
+		&:after
+			width: 2px
+			height: 9px
+	&__bottom
+		padding: 25px 0
+		+clr
+	&__lang
+		position: relative
+		float: left
+		padding-left: 38px
+		color: $white
+		+f(14px, 400, 1)
+		text-decoration: none
+		+hover
+			text-decoration: underline
+	&__lang-icon
+		position: absolute
+		top: 50%
+		left: 0
+		height: 15px
+		transform: translateY(-50%)
+	&__nav
+		float: right
+		margin: 0 -10px
+		font-size: 0
+	&__nav-item,
+	&__nav-link
+		display: inline-block
+		vertical-align: top
+	&__nav-link
+		padding: 0 10px
+		color: $white
+		+f(14px, 400, 1)
+		text-decoration: none
+		+hover
+			text-decoration: underline
+	&__line
+		padding: 15px 0
+		color: $white
+		background: $red
+		font-size: 0
+	&__logo
+		float: left
+		margin-right: 20px
+		border: 2px solid $white
+		&-icon 
+			height: 40px
+	&__copy
+		float: left
+		padding-top: 13px
+		font-family: $familyHelvetica
+		+f(14px, 400, 16px)
+	&__contact
+		float: right
+		padding-top: 13px
+		text-align: right
+		white-space: nowrap
+		&-label
+			display: inline-block
+			vertical-align: top
+			margin-right: 12px
+			font-family: $familyHelvetica
+			+f(14px, 500, 16px)
+		&-link 
+			display: inline-block
+			vertical-align: top
+			padding: 8px
+			margin: -10px 0 -7px
+			color: $white
+			line-height: 18px
+			i
+				font-size: 18px
+				vertical-align: middle
+			.fa-twitter
+				font-size: 17px
+			.fa-youtube
+				font-size: 15px

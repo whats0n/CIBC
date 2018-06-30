@@ -1,0 +1,38 @@
+<!-- begin cards -->
+<div class="cards">
+	<div class="inner cards__inner">
+		<h2 class="title-lg title-lg_regular cards__title">Lorem ipsum dolor sit amet.</h2>
+		<div class="cards__row">
+			{% for item in [
+				{
+					label: 'MLGIC',
+					title: 'Consectetuer elit sed diam.',
+					description: 'Our MLGIC notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+					link: 'See MLGIC offerings'
+				},
+				{
+					label: 'PPN',
+					title: 'Protect my initial investment.',
+					description: 'Our PPN notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+					link: 'See PPN offerings'
+				},
+				{
+					label: 'PAR',
+					title: 'Potential rewards have risks.',
+					description: 'Our PAR notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+					link: 'See PAR offerings'
+				}
+			] %}
+				<div class="cards__col">
+					<div class="card">
+						<div class="label card__label">{{item.label}}</div>
+						<h3 class="title-md card__title">{{item.title}}</h3>
+						<div class="card__description">{{item.description}}</div>
+						<a href="#" class="link link_lg card__link">{{item.link}}</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end cards -->

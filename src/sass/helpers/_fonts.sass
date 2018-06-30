@@ -1,0 +1,30 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	// src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+	src: url('../fonts/' + $file +  '.eot')
+	src: url('../fonts/' + $file +  '.eot?#iefix') format('embedded-opentype'), url('../fonts/' + $file +  '.woff2') format('woff2'), url('../fonts/' + $file +  '.woff') format('woff'), url('../fonts/' + $file +  '.ttf')  format('truetype')
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+$familyPrimary: 'Glober'
+$familyHelvetica: 'Helvetica Neue'
+
+@font-face
+	+fontdefault(normal, 400, $familyHelvetica)
+	+fontpath($familyHelvetica + ' Regular', $familyHelvetica + '-Regular', HelveticaNeue)
+
+@font-face
+	+fontdefault(normal, 500, $familyHelvetica)
+	+fontpath($familyHelvetica + ' Regular', $familyHelvetica + '-Regular', HelveticaNeue-Medium)
+
+@font-face
+	+fontdefault(normal, 400, $familyPrimary)
+	+fontpath($familyPrimary + ' Regular', $familyPrimary + '-Regular', fontfabric_-_globerregular)
+@font-face
+	+fontdefault(normal, 600, $familyPrimary)
+	+fontpath($familyPrimary + ' Semibold', $familyPrimary + '-Semibold', fontfabric_-_globersemibold)
+@font-face
+	+fontdefault(normal, 700, $familyPrimary)
+	+fontpath($familyPrimary + ' Bold', $familyPrimary + '-Bold', fontfabric_-_globerbold)

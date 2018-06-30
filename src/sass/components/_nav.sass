@@ -1,0 +1,22 @@
+.nav
+	background: $red
+	font-size: 0
+	&__list
+		padding: 1px 0
+		border-left: 1px solid $darkRed
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 25%
+	&__link
+		display: block
+		padding: 19px
+		border-right: 1px solid $darkRed
+		color: $white
+		+f(17px, 400, 20px)
+		text-align: center
+		text-decoration: none
+		transition: color 0.3s, background 0.3s
+		+hover
+			color: $red 
+			background: $white

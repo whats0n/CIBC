@@ -1,0 +1,22 @@
+.btn
+	display: inline-block
+	vertical-align: top
+	padding: 10px 20px
+	border-radius: 3px
+	color: $white
+	background: $blue
+	font-family: $familySecondary
+	+f(16px, 400, 20px)
+	text-decoration: none
+	transition: color 0.3s, background 0.3s
+	+hover
+		color: $white
+		background: #4686c6
+	&_white-transparent
+		padding: 9px 19px
+		border: 1px solid $white
+		color: $white
+		background: none
+		+hover
+			color: $gray 
+			background: $white

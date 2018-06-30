@@ -1,0 +1,91 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="inner footer__inner">
+		<div class="footer__controls">
+			<div class="footer__row">
+				<div class="footer__col">
+					<div class="search search_awesome footer__search">
+						<input type="text" class="search__input" placeholder="Search">
+						<button class="search__btn"><i class="material-icons search__icon">search</i></button>
+					</div>
+				</div>
+				<div class="footer__col footer__btn">
+					<a href="#" class="btn btn_white-transparent">Register Today</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__middle">
+			<div class="footer__row">
+				{% for item in [
+					[ { title: 'Contact Us' }, { title: 'CIBC Private Wealth Management' } ],
+					[ { title: 'CIBC Capital Markets' }, { title: 'CIBC Wood Gundy' } ],
+					[ { title: 'CIBC Websites' }, { title: 'CIBC Private Wealth Management – U.S.' } ]
+				] %}
+					<div class="footer__col">
+						<ul class="footer__list">
+							{% for item in item %}
+								<li class="footer__item"><a href="#" class="footer__link">{{item.title}}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+				<div class="footer__col">
+					<ul class="footer__list">
+						<li class="footer__item"><a href="#" class="footer__link">Accessibility at CIBC</a></li>
+						<li class="footer__item">
+							<div class="footer__label">Contrast:</div>
+							<div class="footer__choices">
+								<a href="#" class="footer__choice">Normal</a>
+								<a href="#" class="footer__choice is-active">High</a>
+							</div>
+						</li>
+						<li class="footer__item">
+							<div class="footer__label">Text Size:</div>
+							<div class="footer__sizes">
+								<button class="footer__size footer__minus"></button>
+								<button class="footer__size footer__plus is-active"></button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<a href="#" class="footer__lang"><img src="img/flag-canada.svg" alt="/" class="footer__lang-icon">English</a>
+			<nav class="footer__nav">
+				<ul class="footer__nav-list">
+					{% for item in [
+						{ title: 'About CIBC' },
+						{ title: 'Privacy & Security' },
+						{ title: 'Legal' },
+						{ title: 'Site Map' }
+					] %}
+						<li class="footer__nav-item"><a href="#" class="footer__nav-link">{{item.title}}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="footer__line">
+		<div class="inner footer__inner">
+			<a href="#" class="footer__logo">
+				<img src="img/logo.svg" alt="CIBC" class="footer__logo-icon">
+			</a>
+			<div class="footer__copy">Canadian Imperial Bank of Commerce Website - Copyright © CIBC.</div>
+			<div class="footer__contact">
+				<div class="footer__contact-label">Connect with us:</div>
+				{% for item in [
+					{ icon: 'facebook' },
+					{ icon: 'twitter' },
+					{ icon: 'youtube' },
+					{ icon: 'linkedin' }
+				] %}
+					<a href="#" class="footer__contact-link">
+						<i class="fab fa-{{item.icon}}"></i>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->
