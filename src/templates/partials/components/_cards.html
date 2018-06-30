@@ -24,14 +24,7 @@
 				}
 			] %}
 				<div class="cards__col">
-					<div class="card">
-						<div class="label card__label">{{item.label}}</div>
-						<h3 class="title-md card__title">{{item.title}}</h3>
-						<div class="card__description">{{item.description}}</div>
-						<div class="card__link">
-							<a href="#" class="link link_lg">{{item.link}}</a>
-						</div>
-					</div>
+					{{mixins.card(item)}}
 				</div>
 			{% endfor %}
 		</div>

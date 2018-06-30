@@ -1,0 +1,22 @@
+---
+title: Index page
+hero: {
+	title: 'Lorem ipsum dolor sit amet consectetuer adipiscing',
+	btn: 'Register Today'
+}
+header: {
+	links: [
+		{ title: 'Contact Us' },
+		{ title: 'G Raymond' }
+	]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include 'partials/components/_notes.html' %}
+	{% include 'partials/components/_cards.html' %}
+	{% include 'partials/components/_items.html' %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!-- begin notes -->
+<div class="notes">
+	<div class="notes__container" style="background-image: url(img/notes.jpg);">
+		<div class="inner notes__inner">
+			<h2 class="title-lg notes__title">Notes You Might Like</h2>
+			<h2 class="title-lg title-lg_regular notes__subtitle">Lorem ipsum dolor sit amet, conse, sed diam nonummy nibh.</h2>
+			<div class="notes__row">
+				{% for item in [
+					{
+						label: 'MLGIC',
+						title: 'Consectetuer elit sed diam.',
+						description: 'Our MLGIC notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+						link: 'See MLGIC offerings'
+					},
+					{
+						label: 'PPN',
+						title: 'Protect my initial investment.',
+						description: 'Our PPN notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+						link: 'See PPN offerings'
+					},
+					{
+						label: 'PAR',
+						title: 'Potential rewards have risks.',
+						description: 'Our PAR notes sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.',
+						link: 'See PAR offerings'
+					}
+				] %}
+					<div class="notes__col">
+						{{mixins.card(item)}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end notes -->

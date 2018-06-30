@@ -31,3 +31,23 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro card(props) %}
+	<div class="card">
+		<div class="label card__label">{{props.label}}</div>
+		<h3 class="title-md card__title">{{props.title}}</h3>
+		{% if props.description %}
+			<div class="card__description">{{props.description}}</div>
+		{% endif %}
+		{% if props.list %}
+			<ul class="card__list">
+				{% for item in props.list %}
+					<li>{{item}}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		<div class="card__link">
+			<a href="#" class="link link_lg">{{props.link}}</a>
+		</div>
+	</div>
+{% endmacro %}

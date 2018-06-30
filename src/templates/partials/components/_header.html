@@ -19,7 +19,7 @@
 		</a>
 		<div class="header__right">
 			<ul class="header__list">
-				{% for item in [
+				{% for item in header.links or [
 					{ title: 'Contact Us' },
 					{ title: 'Sign On' }
 				] %}
