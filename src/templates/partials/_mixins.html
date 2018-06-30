@@ -25,7 +25,9 @@
 		<div class="item__content">
 			<h3 class="title-md item__title">{{props.title}}</h3>
 			<div class="item__description">{{props.description | safe}}</div>
-			<a href="#" class="link link_lg item__link">{{props.link}}</a>
+			<div class="item__link">
+				<a href="#" class="link link_lg">{{props.link}}</a>
+			</div>
 		</div>
 	</div>
 {% endmacro %}

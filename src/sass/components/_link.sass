@@ -1,25 +1,31 @@
 .link
 	position: relative
-	display: inline-block
-	vertical-align: top
+	// display: inline-block
+	// vertical-align: top
+	border-bottom: 1px solid rgba($red,0)
 	color: $red
 	+f(14px, 400, 16px)
 	text-decoration: none
+	transition: border-color 0.3s
 	+hover
-		&:before
-			opacity: 1
-	&:before
-		content: ''
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		border-top: 1px solid $red
-		opacity: 0
-		transition: opacity 0.3s
+		border-color: $red
+	// 	&:before
+	// 		opacity: 1
+	// &:before
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	right: 0
+	// 	bottom: 0
+	// 	border-top: 1px solid $red
+	// 	opacity: 0
+	// 	transition: opacity 0.3s
 	&_lg
 		font-family: $familyHelvetica
 		+f(16px, 400, 1.25)
 	&_inherit
 		font-size: 1em
 		line-height: 1.5
+	&_white
+		+hover
+			border-color: $white

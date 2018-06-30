@@ -24,19 +24,19 @@
 					<div class="footer__col">
 						<ul class="footer__list">
 							{% for item in item %}
-								<li class="footer__item"><a href="#" class="footer__link">{{item.title}}</a></li>
+								<li class="footer__item"><a href="#" class="link link_white footer__link">{{item.title}}</a></li>
 							{% endfor %}
 						</ul>
 					</div>
 				{% endfor %}
 				<div class="footer__col">
 					<ul class="footer__list">
-						<li class="footer__item"><a href="#" class="footer__link">Accessibility at CIBC</a></li>
+						<li class="footer__item"><a href="#" class="link link_white footer__link">Accessibility at CIBC</a></li>
 						<li class="footer__item">
 							<div class="footer__label">Contrast:</div>
 							<div class="footer__choices">
-								<a href="#" class="footer__choice">Normal</a>
-								<a href="#" class="footer__choice is-active">High</a>
+								<div class="footer__choice"><a href="#" class="link link_white footer__choice-link">Normal</a></div>
+								<div class="footer__choice"><a href="#" class="link link_white footer__choice-link is-active">High</a></div>
 							</div>
 						</li>
 						<li class="footer__item">
@@ -60,7 +60,7 @@
 						{ title: 'Legal' },
 						{ title: 'Site Map' }
 					] %}
-						<li class="footer__nav-item"><a href="#" class="footer__nav-link">{{item.title}}</a></li>
+						<li class="footer__nav-item"><a href="#" class="link link_white footer__nav-link">{{item.title}}</a></li>
 					{% endfor %}
 				</ul>
 			</nav>
