@@ -15,8 +15,8 @@ var processors = [
     require('lost'),
     mqpacker({
         sort: sortMediaQueries
-    }),
-    csso
+    })
+    // csso
 ];
 
 gulp.task('sass', function() {
