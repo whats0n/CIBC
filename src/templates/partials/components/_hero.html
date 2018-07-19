@@ -1,6 +1,6 @@
 <!-- begin hero -->
 <div class="hero {{hero.classList}}">
-	<div class="hero__container" style="background-image: url(img/{{hero.img or 'hero'}}.jpg);">
+	<div class="hero__container" {% if not hero.noBg %}style="background-image: url(img/{{hero.img or 'hero'}}.jpg);" {% endif %}>
 		<div class="inner hero__inner">
 			<div class="hero__content">
 				<div class="hero__content-in">
@@ -13,6 +13,12 @@
 						{% endif %}
 						{% if hero.description %}
 							<div class="hero__description">{{hero.description}}</div>
+						{% endif %}
+						{% if hero.heroSubTitle %}
+							<h3 class="label hero__subtitle">{{hero.heroSubTitle | safe}}</h3>
+						{% endif %}
+						{% if hero.heroTitle %}
+							<h2 class="title-xl hero__title">{{hero.heroTitle | safe}}</h2>
 						{% endif %}
 					</div>
 				</div>

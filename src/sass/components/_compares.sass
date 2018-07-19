@@ -1,0 +1,82 @@
+.compares
+	padding: 65px 0 55px
+	&__inner
+		max-width: 1200px
+	.table
+		.alert
+			position: relative
+			padding: 0 10px
+		.alert-close
+			position: absolute
+			left: 100%
+			bottom: 100%
+			width: 30px
+			display: block
+			height: 30px
+			border-radius: 50%
+			text-decoration: none
+			transition: background-color .24s ease-in-out
+			border: 1px solid #808080
+			+hover
+				background-color: #808080
+				&:before,
+				&:after
+					background-color: $white
+			&:before,
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%, -50%, 0) rotateZ(45deg)
+				background-color: #808080
+				transition: background-color .24s ease-in-out
+			&:before
+				width: 12px
+				height: 1px
+			&:after
+				width: 1px
+				height: 12px
+		.label
+			margin-bottom: 55px
+			font-family: $familyPrimary
+		.checkbox
+			margin-top: 10px
+		.add__note
+			width: 200px
+			height: 92px
+			border-radius: 3px
+			border: 1px solid $blue
+			margin: 0 auto 28px
+			overflow: hidden
+		.add__note-container
+			width: 100%
+			height: 100%
+			display: block
+			position: relative
+			text-decoration: none
+			cursor: pointer
+			background-color: $white
+			transition: background-color .24s ease-in-out
+			+hover
+				background-color: $blue
+				&:before,
+				&:after
+					background-color: $white
+			&:before,
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%, -50%, 0)
+				background-color: $blue
+				transition: background-color .24s ease-in-out
+			&:before
+				width: 14px
+				height: 2px
+			&:after
+				width: 2px
+				height: 14px

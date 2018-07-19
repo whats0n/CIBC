@@ -4940,6 +4940,18 @@ body {
   background: #fff;
 }
 
+.btn_blue-transparent {
+  padding: 9px 19px;
+  border: 1px solid #336699;
+  color: #336699;
+  background: none;
+}
+
+.btn_blue-transparent:hover {
+  color: #fff;
+  background: #336699;
+}
+
 .checkbox {
   position: relative;
   display: inline-block;
@@ -5299,6 +5311,22 @@ body {
   line-height: 1.2;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hero {
+  background-color: #F5F5F5;
+}
+
 .hero_sm .hero__info {
   height: 210px;
 }
@@ -5309,6 +5337,17 @@ body {
 
 .hero_sm .hero__title:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.hero_centered {
+  text-align: center;
+}
+
+.hero_centered .hero__subtitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 26px;
+  color: #333333;
 }
 
 .hero__description {
@@ -6193,6 +6232,10 @@ body {
   background: #F5F5F5;
 }
 
+.table__tfooter {
+  display: table-footer-group;
+}
+
 .table__tbody {
   display: table-row-group;
 }
@@ -6262,6 +6305,41 @@ body {
 
 .table .checkbox {
   margin-top: 4px;
+}
+
+.table.table_compares .table__thead {
+  background: transparent;
+}
+
+.table.table_compares .table__thead .table__td {
+  padding: 0 20px 38px;
+}
+
+.table.table_compares .table__tbody {
+  background: transparent;
+}
+
+.table.table_compares .table__tbody .table__td {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table.table_compares .table__td {
+  padding: 17px 18px;
+  width: 25%;
+}
+
+.table.table_compares .table__td:first-child {
+  font-family: "Glober", Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.table.table_compares .table__tfooter .table__td {
+  border-bottom: none;
 }
 
 .books-item {
@@ -6432,6 +6510,129 @@ body {
 
 .contact-info .cards__title {
   margin-bottom: 20px;
+}
+
+.compares {
+  padding: 65px 0 55px;
+}
+
+.compares__inner {
+  max-width: 1200px;
+}
+
+.compares .table .alert {
+  position: relative;
+  padding: 0 10px;
+}
+
+.compares .table .alert-close {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  width: 30px;
+  display: block;
+  height: 30px;
+  border-radius: 50%;
+  text-decoration: none;
+  -webkit-transition: background-color .24s ease-in-out;
+  -o-transition: background-color .24s ease-in-out;
+  transition: background-color .24s ease-in-out;
+  border: 1px solid #808080;
+}
+
+.compares .table .alert-close:hover {
+  background-color: #808080;
+}
+
+.compares .table .alert-close:hover:before, .compares .table .alert-close:hover:after {
+  background-color: #fff;
+}
+
+.compares .table .alert-close:before, .compares .table .alert-close:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotateZ(45deg);
+  transform: translate3d(-50%, -50%, 0) rotateZ(45deg);
+  background-color: #808080;
+  -webkit-transition: background-color .24s ease-in-out;
+  -o-transition: background-color .24s ease-in-out;
+  transition: background-color .24s ease-in-out;
+}
+
+.compares .table .alert-close:before {
+  width: 12px;
+  height: 1px;
+}
+
+.compares .table .alert-close:after {
+  width: 1px;
+  height: 12px;
+}
+
+.compares .table .label {
+  margin-bottom: 55px;
+  font-family: "Glober", Helvetica, sans-serif;
+}
+
+.compares .table .checkbox {
+  margin-top: 10px;
+}
+
+.compares .table .add__note {
+  width: 200px;
+  height: 92px;
+  border-radius: 3px;
+  border: 1px solid #336699;
+  margin: 0 auto 28px;
+  overflow: hidden;
+}
+
+.compares .table .add__note-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-transition: background-color .24s ease-in-out;
+  -o-transition: background-color .24s ease-in-out;
+  transition: background-color .24s ease-in-out;
+}
+
+.compares .table .add__note-container:hover {
+  background-color: #336699;
+}
+
+.compares .table .add__note-container:hover:before, .compares .table .add__note-container:hover:after {
+  background-color: #fff;
+}
+
+.compares .table .add__note-container:before, .compares .table .add__note-container:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #336699;
+  -webkit-transition: background-color .24s ease-in-out;
+  -o-transition: background-color .24s ease-in-out;
+  transition: background-color .24s ease-in-out;
+}
+
+.compares .table .add__note-container:before {
+  width: 14px;
+  height: 2px;
+}
+
+.compares .table .add__note-container:after {
+  width: 2px;
+  height: 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {

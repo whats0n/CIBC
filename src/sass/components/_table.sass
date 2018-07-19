@@ -9,6 +9,8 @@
 	&__thead
 		display: table-header-group
 		background: #F5F5F5
+	&__tfooter
+		display: table-footer-group
 	&__tbody
 		display: table-row-group
 	&__tr
@@ -51,3 +53,23 @@
 		vertical-align: top
 	.checkbox
 		margin-top: 4px
+	&.table_compares .table
+		&__thead
+			background: transparent
+			.table__td
+				padding: 0 20px 38px
+		&__tbody
+			background: transparent
+			.table
+				&__td
+					+f(16px, 400, 30px)
+					font-family: $familySecondary
+		&__td
+			padding: 17px 18px
+			width: 25%
+			&:first-child
+				font-family: $familyPrimary
+				+f(20px, 700, 30px)
+		&__tfooter .table
+			&__td
+				border-bottom: none

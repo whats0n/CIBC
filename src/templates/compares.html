@@ -1,0 +1,119 @@
+---
+title: Compares page
+hero: {
+	heroTitle: 'Compare up to 3 Notes and find the best <br>Note to suit your needs.',
+	classList: 'hero_sm hero_centered',
+	heroSubTitle: 'Compare Notes',
+	noBg: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% include 'partials/components/_hero.html' %}
+
+	<div class="compares">
+		<div class="compares__inner inner">
+			<div class="table table_compares">
+				<div class="table__thead">
+					<div class="table__tr">
+						<div class="table__td"></div>
+						<div class="table__td text-center">
+							<div class="alert">
+								<a href="#" class="alert-close"></a>
+								<div class="label">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</div>
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" checked="">
+									<span class="checkbox__icon"><i class="material-icons checkbox__icon-in">check</i></span>
+									<span class="checkbox__content">
+										<span class="checkbox__title">Add to My Watchlist</span>
+									</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="table__td text-center">
+							<div class="alert">
+								<a href="#" class="alert-close"></a>
+								<div class="label">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</div>
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input">
+									<span class="checkbox__icon"><i class="material-icons checkbox__icon-in">check</i></span>
+									<span class="checkbox__content">
+										<span class="checkbox__title">Add to My Watchlist</span>
+									</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="table__td text-center">
+							<div class="add__note"><a href="#" class="add__note-container"></a></div>
+							<a href="#" class="btn btn_blue-transparent">Add a Note</a>
+						</div>
+					</div>
+				</div>
+				<div class="table__tbody">
+					{% for item in [
+						{
+							caption: 'Issue Date',
+							text: '20-Jun-2014'
+						},
+						{
+							caption: 'Maturity Date',
+							text: '20-Jun-2019'
+						},
+						{
+							caption: 'FundSERV Code',
+							text: 'CBL9174'
+						},
+						{
+							caption: 'Currency',
+							text: 'CAD'
+						},
+						{
+							caption: 'Product Type',
+							text: 'MLGIC'
+						},
+						{
+							caption: 'Asset Class',
+							text: 'Equity'
+						},
+						{
+							caption: 'Geography',
+							text: 'Canada'
+						},
+						{
+							caption: 'Payoff Feature',
+							text: '50% Boost'
+						},
+						{
+							caption: 'Autocall Feature',
+							text: 'Callable at 100%'
+						},
+						{
+							caption: 'Principal Protection',
+							text: 'Barrier – 20%'
+						}
+					] %}
+						<div class="table__tr">
+							<div class="table__td">{{item.caption}}</div>
+							<div class="table__td text-center">{{item.text}}</div>
+							<div class="table__td text-center">{{item.text}}</div>
+							<div class="table__td"></div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="table__tfooter">
+					<div class="table__tr">
+						<div class="table__td"></div>
+						<div class="table__td text-center"><a href="#" class="btn">See Note Details</a></div>
+						<div class="table__td text-center"><a href="#" class="btn">See Note Details</a></div>
+						<div class="table__td"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end compares -->
+{% endblock %}
