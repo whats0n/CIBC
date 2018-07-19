@@ -1,0 +1,55 @@
+---
+title: Contacts us page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="contact">
+		<div class="inner contact__inner">
+			<h2 class="contact__title title-lg">Contact Us</h2>
+			<div class="contact__row">
+				{% for item in range(0,4) %}
+					<div class="contact__col">
+						<div class="contact-item">
+							<div class="contact-item__image"></div>
+							<div class="contact-item__name">Maria Sanchez</div>
+							<div class="contact-item__position">Director of Operations</div>
+							<ul class="list-strong">
+								<li><strong>Ph:</strong><a href="tel:4169194781" class="contact-item__phone link">(416) 919 4781</a></li>
+								<li><strong>Em:</strong><a href="mailto:m.sanchez@cibc.com" class="contact-item__email link">m.sanchez@cibc.com</a></li>
+							</ul>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end contact -->
+
+	<div class="contact-info">
+		<div class="inner">
+			<div class="cards__title title-lg">More Information</div>
+			<div class="cards__row">
+				{% for item in [
+					{
+						label: 'FAQ',
+						title: 'Most questions can be answered – fast.',
+						description: 'Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.',
+						link: 'Visit FAQs'
+					},
+					{
+						label: 'SUPPORT',
+						title: 'Just ask. 1-866-474-0142',
+						description: 'Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.',
+						link: 'Email Us'
+					}
+				] %}
+					<div class="cards__col cards__half">
+						{{mixins.card(item)}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end contact-info -->
+{% endblock %}

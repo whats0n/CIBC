@@ -1,0 +1,48 @@
+.contact
+	padding: 55px 0 60px
+	&__inner
+		max-width: 1120px
+	&__row
+		margin: 0 -40px
+		font-size: 0
+	&__col
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 40px
+	&__title
+		margin-bottom: 40px
+		color: $gray
+	&-item
+		&__image
+			width: 140px
+			height: 140px
+			background-color: $lightGray
+			margin-bottom: 30px
+		&__name
+			+f(20px, 700, null)
+		&__name,
+		&__position
+			color: $gray
+			font-family: $familyPrimary
+		&__position
+			+f(16px, 400, null)
+			margin-bottom: 24px
+		&__phone
+			color: $gray
+			margin-bottom: 5px
+			display: inline-block
+			+hover
+				border-color: $gray
+		&__phone,
+		&__email
+			font-family: $familySecondary
+			+f(16px, 400, 14px)
+	&-info
+		background-color: $lightGray
+		padding: 40px 0 30px 0
+		.cards
+			&__row
+				margin: 0 -10px
+			&__title
+				margin-bottom: 20px
