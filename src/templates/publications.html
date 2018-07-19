@@ -1,0 +1,55 @@
+---
+title: Publications page
+hero: {
+	title: 'Read our noteworthy publications',
+	classList: 'hero_sm',
+	img: 'bg-hiro-publications',
+	description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh '
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include 'partials/components/_hero.html' %}
+
+	<div class="books">
+		<div class="inner books__inner">
+			<h2 class="books__title title-lg">Lorem ipsum dolor sit amet.</h2>
+			<div class="books__row">
+				{% for item in [
+					{
+						title: 'Structured Notes Quarterly – Spring 2018',
+						date: 'March 21, 2018'
+					},
+					{
+						title: 'Your Structured Notes Quarterly – Winter 2017/18',
+						date: 'March 21, 2018'
+					},
+					{
+						title: 'Customized Investment Solutions for High-Net-Worth Investors and Family Offices',
+						date: 'March 21, 2018'
+					},
+					{
+						title: 'Customized Investment Solutions for Municipalities and Not-For-Profits',
+						date: 'March 21, 2018'
+					},
+					{
+						title: 'Where income, growth and capital preservation are on your terms.',
+						date: 'March 21, 2018'
+					}
+				] %}
+
+				<div class="books__col">
+					<div class="books__item">
+						<div class="books__image"><img src="img/books-item-0{{loop.index}}.jpg" alt=""></div>
+						<div class="books__subtitle title-md">{{item.title}}</div>
+						<div class="books__date">{{item.date}}</div>
+						<a href="#" class="books__link" download="">Download</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
