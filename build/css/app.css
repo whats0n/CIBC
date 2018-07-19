@@ -6255,6 +6255,52 @@ body {
   margin-top: 4px;
 }
 
+.books-item {
+  font-size: 0;
+  text-align: left;
+}
+
+.books-item__image {
+  max-width: 140px;
+  font-size: 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 2px 2px 7px rgba(51, 51, 51, 0.3);
+  box-shadow: 2px 2px 7px rgba(51, 51, 51, 0.3);
+}
+
+.books-item__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.books-item__subtitle {
+  color: #333333;
+}
+
+.books-item__date {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Glober", Helvetica, sans-serif;
+  color: #333333;
+  margin: 20px auto 30px;
+}
+
+.books-item__link {
+  border-bottom: 1px solid transparent;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #AE0D1C;
+  text-decoration: none;
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+}
+
+.books-item__link:hover {
+  border-color: #AE0D1C;
+}
+
 .books {
   padding: 40px 0;
 }
@@ -6279,52 +6325,6 @@ body {
   width: 25%;
   display: inline-block;
   vertical-align: top;
-}
-
-.books__item {
-  font-size: 0;
-  text-align: left;
-}
-
-.books__image {
-  max-width: 140px;
-  font-size: 0;
-  margin-bottom: 30px;
-  -webkit-box-shadow: 2px 2px 7px rgba(51, 51, 51, 0.3);
-  box-shadow: 2px 2px 7px rgba(51, 51, 51, 0.3);
-}
-
-.books__image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.books__subtitle {
-  color: #333333;
-}
-
-.books__date {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Glober", Helvetica, sans-serif;
-  color: #333333;
-  margin: 20px auto 30px;
-}
-
-.books__link {
-  border-bottom: 1px solid transparent;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #AE0D1C;
-  text-decoration: none;
-  -webkit-transition: border-color .3s ease-in-out;
-  -o-transition: border-color .3s ease-in-out;
-  transition: border-color .3s ease-in-out;
-}
-
-.books__link:hover {
-  border-color: #AE0D1C;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -39,17 +39,17 @@ hero: {
 						date: 'March 21, 2018'
 					}
 				] %}
-
-				<div class="books__col">
-					<div class="books__item">
-						<div class="books__image"><img src="img/books-item-0{{loop.index}}.jpg" alt=""></div>
-						<div class="books__subtitle title-md">{{item.title}}</div>
-						<div class="books__date">{{item.date}}</div>
-						<a href="#" class="books__link" download="">Download</a>
+					<div class="books__col">
+						<div class="books-item">
+							<div class="books-item__image"><img src="img/books-item-0{{loop.index}}.jpg" alt=""></div>
+							<div class="books-item__subtitle title-md">{{item.title}}</div>
+							<div class="books-item__date">{{item.date}}</div>
+							<a href="#" class="books-item__link">Download</a>
+						</div>
 					</div>
-				</div>
 				{% endfor %}
 			</div>
 		</div>
 	</div>
+	<!-- end books -->
 {% endblock %}
