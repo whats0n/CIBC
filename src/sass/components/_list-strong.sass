@@ -10,3 +10,26 @@
 	vertical-align: top
 	min-width: 30px
 	margin-right: 12px
+
+.list_graph
+	font-size: 0
+	display: inline-block
+	vertical-align: top
+	li p
+		+f(14px, 400, 1)
+		font-family: $familySecondary
+	&-vertical
+		margin-top: -5px
+	&-vertical li:not(:last-child)
+		margin-bottom: 20px
+	&-vertical li p
+		display: block
+	&-horizontal
+		margin-left: 12px
+	&-horizontal li
+		display: inline-block
+		vertical-align: top
+		&:not(:first-child)
+			margin-left: 70px
+	&-horizontal li p
+		display: inline-block

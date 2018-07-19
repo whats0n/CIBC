@@ -1,0 +1,89 @@
+---
+title: Historical page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="page page_historical">
+		<div class="inner">
+			<h1 class="title-xl page__title">CIBC Canadian Infrastructure Autocallable <br>Deposit Notes, Series 3 (F-class)</h1>
+			<div class="page__heading">
+				<h2 class="title-md page__subtitle">Current Issue Available Until 27 March 2018</h2>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input">
+					<span class="checkbox__icon"><i class="material-icons checkbox__icon-in">check</i></span>
+					<span class="checkbox__content">
+						<span class="checkbox__title">Add to My Watchlist</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="tabs">
+				<div class="tabs__controls">
+					{% for item in [
+						{title: 'Overview', active: true},
+						{title: 'Historical Performance'},
+						{title: 'Current Performance'},
+						{title: 'Note Events'},
+						{title: 'Documents'},
+						{title: 'Disclaimers'}
+					] %}
+						<a href="#" class="tabs__control {% if item.active %}is-active{% endif %}">{{item.title}}</a>
+					{% endfor %}
+				</div>
+				<div class="tabs__container">
+					<div class="tabs__content">
+						<div class="tabs__row">
+							<div class="tabs__col tabs__graph">
+								<div class="tabs__header">
+									<h3 class="title-md tabs__title">Historical Performance</h3>
+								</div>
+
+								<div class="tabs__graph-wrapper">
+									<ul class="list_graph list_graph-vertical">
+										<li><p>$ 100.5</p></li>
+										<li><p>$ 100.0</p></li>
+										<li><p>$ 99.5</p></li>
+										<li><p>$ 99.0</p></li>
+										<li><p>$ 99.5</p></li>
+										<li><p>$ 98.0</p></li>
+										<li><p>$ 97.5</p></li>
+										<li><p>$ 97.0</p></li>
+										<li><p>$ 96.5</p></li>
+										<li><p>$ 96.0</p></li>
+										<li><p>$ 95.5</p></li>
+									</ul>
+									<div class="tabs__graph-image"><img src="img/graph.svg" alt=""></div>
+									<ul class="list_graph list_graph-horizontal">
+										<li><p>7 Mar 2018</p></li>
+										<li><p>8 Mar 2018</p></li>
+										<li><p>9 Mar 2018</p></li>
+										<li><p>10 Mar 2018</p></li>
+										<li><p>11 Mar 2018</p></li>
+									</ul>
+								</div>
+
+								<ul class="graph__description">
+									<li class="graph__description-item">
+										<div class="graph__description-icon"><img src="img/box-gradient.svg" alt=""></div>
+										<p>CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</p>
+									</li>
+									<li class="graph__description-item">
+										<div class="graph__description-icon"><img src="img/box-bordered.svg" alt=""></div>
+										<p>Underlying Performance</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="tabs__col tabs__pricing">
+								<div class="tabs__header">
+									<h3 class="title-md tabs__title">Historical Performance</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

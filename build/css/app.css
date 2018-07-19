@@ -6005,6 +6005,101 @@ body {
   margin-bottom: 30px;
 }
 
+.page_historical {
+  padding-bottom: 100px;
+}
+
+.page_historical .page__title {
+  display: inline-block;
+}
+
+.page_historical .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.page_historical .page__heading {
+  float: right;
+  text-align: right;
+  margin: 15px -10px 0 0;
+}
+
+.page_historical .tabs__row {
+  font-size: 0;
+  margin: 0 -8px;
+}
+
+.page_historical .tabs__controls {
+  margin-bottom: 68px;
+}
+
+.page_historical .tabs__control {
+  width: 16.66667%;
+  padding: 22px 18px 21px;
+}
+
+.page_historical .tabs__col {
+  padding: 0 8px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.page_historical .tabs__col.tabs__graph {
+  max-width: 680px;
+  width: 100%;
+}
+
+.page_historical .tabs__col.tabs__pricing {
+  width: 100%;
+  max-width: 480px;
+}
+
+.page_historical .tabs__header {
+  padding: 0;
+}
+
+.page_historical .tabs__graph {
+  font-size: 0;
+}
+
+.page_historical .tabs__graph .graph__description {
+  margin-top: 38px;
+  margin-left: 57px;
+}
+
+.page_historical .tabs__graph .graph__description-item {
+  display: block;
+}
+
+.page_historical .tabs__graph .graph__description-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.page_historical .tabs__graph .graph__description-item p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page_historical .tabs__graph .graph__description-icon {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.page_historical .tabs__graph-image {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  max-width: 580px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .tabs__controls {
   margin: 0 -10px 38px;
 }
@@ -6432,6 +6527,48 @@ body {
   vertical-align: top;
   min-width: 30px;
   margin-right: 12px;
+}
+
+.list_graph {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list_graph li p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list_graph-vertical {
+  margin-top: -5px;
+}
+
+.list_graph-vertical li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list_graph-vertical li p {
+  display: block;
+}
+
+.list_graph-horizontal {
+  margin-left: 12px;
+}
+
+.list_graph-horizontal li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list_graph-horizontal li:not(:first-child) {
+  margin-left: 70px;
+}
+
+.list_graph-horizontal li p {
+  display: inline-block;
 }
 
 .contact {

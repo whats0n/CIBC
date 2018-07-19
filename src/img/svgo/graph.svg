@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 576.8 340.5" enable-background="new 0 0 576.8 340.5" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="287.7673" y1="339.5" x2="287.7673" y2="44.5">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#98B2CD"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="0.3,295 141.7,205.5 276.3,258.5 428.3,184.5 575.3,44.5 575.3,339.5 0.3,339.5 "/>
+<polyline fill="none" stroke="#30659B" stroke-miterlimit="10" points="0.3,295 141.7,205.5 276.3,258.5 428.3,184.5 575.3,44.5 "/>
+<g>
+	<g>
+		<line fill="none" stroke="#D60034" stroke-miterlimit="10" x1="0.3" y1="262" x2="1.6" y2="261.3"/>
+		<polyline fill="none" stroke="#D60034" stroke-miterlimit="10" stroke-dasharray="2.9942,2.9942" points="4.3,260 141.7,192.5 
+			276.3,195.5 428.3,171.5 572.5,112.6 		"/>
+		<line fill="none" stroke="#D60034" stroke-miterlimit="10" x1="573.9" y1="112.1" x2="575.3" y2="111.5"/>
+	</g>
+</g>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="308" x2="576.8" y2="308"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="273.8" x2="576.8" y2="273.8"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="239.7" x2="576.8" y2="239.7"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="205.5" x2="576.8" y2="205.5"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="171.3" x2="576.8" y2="171.3"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="137.2" x2="576.8" y2="137.2"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="103" x2="576.8" y2="103"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="68.8" x2="576.8" y2="68.8"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="34.7" x2="576.8" y2="34.7"/>
+<line opacity="0.1" fill="none" stroke="#333333" stroke-miterlimit="10" x1="0.8" y1="0.5" x2="576.8" y2="0.5"/>
+<polyline fill="none" stroke="#333333" stroke-miterlimit="10" points="0.8,1 0.8,340 576.8,340 "/>
+</svg>
