@@ -67,3 +67,14 @@
 		{% endif %}
 	</label>
 {% endmacro %}
+
+{% macro select(props) %}
+<div class="select-wrapper">
+	<select class="select">
+		{% for item in props.options %}
+			<option value="{{item}}">{{item}}</option>
+		{% endfor %}
+	</select>
+	<a href="#" class="select__btn"><i class="icon-arrow-down"></i></a>
+</div>
+{% endmacro %}
