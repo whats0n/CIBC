@@ -69,12 +69,12 @@
 {% endmacro %}
 
 {% macro select(props) %}
-<div class="select-wrapper">
-	<select class="select">
+<div class="select {{props.classList}}">
+	<select class="select__control">
 		{% for item in props.options %}
-			<option value="{{item}}">{{item}}</option>
+			<option value="{{item}}" class="select__option">{{item}}</option>
 		{% endfor %}
 	</select>
-	<a href="#" class="select__btn"><i class="icon-arrow-down"></i></a>
+	<i class="select__icon"></i>
 </div>
 {% endmacro %}

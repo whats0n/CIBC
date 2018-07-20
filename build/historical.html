@@ -99,16 +99,19 @@
                   <div class="tabs__col tabs__graph">
                     <div class="tabs__header">
                       <h3 class="title-md tabs__title">Historical Performance</h3>
-                      <div class="select-wrapper">
-                        <select class="select">
-                          <option value="From Issue Date">From Issue Date</option>
-                          <option value="From Issue Date">From Issue Date</option>
-                          <option value="From Issue Date">From Issue Date</option>
-                          <option value="From Issue Date">From Issue Date</option>
-                        </select>
-                        <a href="#" class="select__btn">
-                          <i class="icon-arrow-down"></i>
+                      <div class="tabs__header-controls">
+                        <a href="#" class="link">Export to Excel
+                          <i class="tabs__header-icon"></i>
                         </a>
+                        <div class="select select_lg">
+                          <select class="select__control">
+                            <option value="From Issue Date" class="select__option">From Issue Date</option>
+                            <option value="From Issue Date 2" class="select__option">From Issue Date 2</option>
+                            <option value="From Issue Date 3" class="select__option">From Issue Date 3</option>
+                            <option value="From Issue Date 4" class="select__option">From Issue Date 4</option>
+                          </select>
+                          <i class="select__icon"></i>
+                        </div>
                       </div>
                     </div>
                     <div class="tabs__graph-wrapper">
@@ -186,7 +189,61 @@
                   <div class="tabs__col tabs__pricing">
                     <div class="tabs__header">
                       <h3 class="title-md tabs__title">Historical Performance</h3>
+                      <div class="tabs__header-controls">
+                        <a href="#" class="link">Export to Excel
+                          <i class="tabs__header-icon"></i>
+                        </a>
+                        <div class="select select_xs">
+                          <select class="select__control">
+                            <option value="Last Week" class="select__option">Last Week</option>
+                            <option value="Last Week 2" class="select__option">Last Week 2</option>
+                            <option value="Last Week 3" class="select__option">Last Week 3</option>
+                            <option value="Last Week 4" class="select__option">Last Week 4</option>
+                          </select>
+                          <i class="select__icon"></i>
+                        </div>
+                      </div>
                     </div>
+                    <ul class="list-bordered">
+                      <li class="list-bordered_item">
+                        <p class="text-bolder">Date</p>
+                        <p class="text-bolder">Price</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p>7 Mar 2018</p>
+                        <p>$96.32</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p>8 Mar 2018</p>
+                        <p>$97.45</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p>9 Mar 2018</p>
+                        <p>$97.24</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p>10 Mar 2018</p>
+                        <p>$97.32</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p>11 Mar 2018</p>
+                        <p>$95.99</p>
+                      </li>
+                    </ul>
+                    <ul class="list-bordered">
+                      <li class="list-bordered_item">
+                        <p class="text-bolder">Day Over Day Price Change</p>
+                        <p>$-1.13</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p class="text-bolder">52 Week High</p>
+                        <p>$100.00 (26 Feb 2018)</p>
+                      </li>
+                      <li class="list-bordered_item">
+                        <p class="text-bolder">52 Week Low</p>
+                        <p>$94.40 (21 Mar 2018)</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

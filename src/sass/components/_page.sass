@@ -29,11 +29,24 @@
 			&.tabs__graph
 				max-width: 680px
 				width: 100%
+				.tabs__header-controls
+					margin-right: 30px
 			&.tabs__pricing
 				width: 100%
 				max-width: 480px
+				.list-bordered:not(:last-child)
+					margin-bottom: 60px
 		&__header
 			padding: 0
+			margin-bottom: 20px
+		&__header-controls
+			text-align: right
+			.link
+				margin-right: 20px
+				+f(16px, 400, normal)
+			.link, .select
+				display: inline-block
+				vertical-align: middle
 		&__graph
 			font-size: 0
 			.graph__description

@@ -33,3 +33,22 @@
 			margin-left: 70px
 	&-horizontal li p
 		display: inline-block
+
+.list-bordered
+	&_item
+		display: block
+		&:first-child
+			border-top: 1px solid #DDDDDD
+	&_item
+		border-bottom: 1px solid #DDDDDD
+	&_item p
+		padding: 25px 20px
+		color: $gray
+		display: inline-block
+		vertical-align: middle
+		+f(16px, 400, 0.875)
+		font-family: $familySecondary
+		width: 50%
+		&.text-bolder
+			+f(16px, 700, 0.875)
+			font-family: $familyPrimary

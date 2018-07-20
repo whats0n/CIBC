@@ -38,14 +38,18 @@ title: Historical page
 								<div class="tabs__header">
 									<h3 class="title-md tabs__title">Historical Performance</h3>
 
-									{{mixins.select({
-										options: [
-										'From Issue Date',
-										'From Issue Date',
-										'From Issue Date',
-										'From Issue Date'
-										]
-									})}}
+									<div class="tabs__header-controls">
+										<a href="#" class="link">Export to Excel <i class="tabs__header-icon"></i></a>
+										{{mixins.select({
+											classList: 'select_lg',
+											options: [
+											'From Issue Date',
+											'From Issue Date 2',
+											'From Issue Date 3',
+											'From Issue Date 4'
+											]
+										})}}
+									</div>
 								</div>
 
 								<div class="tabs__graph-wrapper">
@@ -87,7 +91,49 @@ title: Historical page
 							<div class="tabs__col tabs__pricing">
 								<div class="tabs__header">
 									<h3 class="title-md tabs__title">Historical Performance</h3>
+
+									<div class="tabs__header-controls">
+										<a href="#" class="link">Export to Excel <i class="tabs__header-icon"></i></a>
+										{{mixins.select({
+											classList: 'select_xs',
+											options: [
+											'Last Week',
+											'Last Week 2',
+											'Last Week 3',
+											'Last Week 4'
+											]
+										})}}
+									</div>
 								</div>
+
+								<ul class="list-bordered">
+									{% for item in [
+										{date: 'Date', price: 'Price'},
+										{date: '7 Mar 2018', price: '$96.32'},
+										{date: '8 Mar 2018', price: '$97.45'},
+										{date: '9 Mar 2018', price: '$97.24'},
+										{date: '10 Mar 2018', price: '$97.32'},
+										{date: '11 Mar 2018', price: '$95.99'}
+									] %}
+										<li class="list-bordered_item">
+											<p {% if loop.first %} class="text-bolder" {% endif %}>{{item.date}}</p>
+											<p {% if loop.first %} class="text-bolder" {% endif %}>{{item.price}}</p>
+										</li>
+									{% endfor %}
+								</ul>
+
+								<ul class="list-bordered">
+									{% for item in [
+										{date: 'Day Over Day Price Change', price: '$-1.13'},
+										{date: '52 Week High', price: '$100.00 (26 Feb 2018)'},
+										{date: '52 Week Low', price: '$94.40 (21 Mar 2018)'}
+									] %}
+										<li class="list-bordered_item">
+											<p class="text-bolder">{{item.date}}</p>
+											<p>{{item.price}}</p>
+										</li>
+									{% endfor %}
+								</ul>
 							</div>
 						</div>
 					</div>
