@@ -74,6 +74,10 @@
 		{% for item in props.options %}
 			<option value="{{item}}" class="select__option">{{item}}</option>
 		{% endfor %}
+
+		{% if props.type %}
+			<option value="{{props.type}}" class="select__option">{{props.type}}</option>
+		{% endif %}
 	</select>
 	<i class="select__icon"></i>
 </div>

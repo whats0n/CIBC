@@ -6135,6 +6135,10 @@ body {
   clear: both;
 }
 
+.tabs__controls.tabs__col-2 .tabs__control {
+  width: 50%;
+}
+
 .tabs__control {
   position: relative;
   float: left;

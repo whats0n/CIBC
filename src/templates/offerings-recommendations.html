@@ -1,0 +1,171 @@
+---
+title: Current Recommendations
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="page">
+		<div class="inner page__inner">
+			<h1 class="title-xl page__title">Current Offerings</h1>
+			<div class="tabs">
+				<div class="tabs__controls tabs__col-2">
+					{% for item in [
+						{ title: 'All' },
+						{ title: 'Recommendations', active: true }
+					] %}
+						<a href="#" class="tabs__control {% if item.active %}is-active{% endif %}">{{item.title}}</a>
+					{% endfor %}
+				</div>
+				<div class="tabs__container">
+					<div class="tabs__content">
+						<div class="tabs__header">
+							<h3 class="title-md tabs__title">Current Principal Protected Notes</h3>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm. Duis autem vel eum iriure dolor in hendrerit.</p>
+						</div>
+						<div class="sidebar tabs__sidebar">
+							<div class="sidebar__box">
+								<div class="sidebar__filters">
+									<div class="sidebar__title">
+										<svg version="1.1" width="21.6px" height="23.1px" viewBox="0 0 21.6 23.1" enable-background="new 0 0 21.6 23.1" class="sidebar__title-icon">
+											<polygon fill="none" stroke="#333333" stroke-miterlimit="10" points="13.5,22 13.5,8.5 20.5,0.5 1.1,0.5 8.1,8.5 8.1,17 "/>
+										</svg>
+										<div class="sidebar__title-text">Filter options</div>
+										<i class="material-icons sidebar__title-help icon-help">help_outline</i>
+									</div>
+									<a href="#" class="link link_inherit sidebar__reset">Reset</a>
+								</div>
+							</div>
+							{% for item in [
+								{
+									title: 'F-Class',
+									list: [
+										{ title: 'F-Class', subtitle: '(3)' }
+									]
+								},
+								{
+									title: 'Currency',
+									list: [
+										{ attrs: 'checked', title: 'CAD', subtitle: '(32)' },
+										{ title: 'USD', subtitle: '(12)' }
+									]
+								},
+								{
+									title: 'Asset Class',
+									list: [
+										{ title: 'Equity ', subtitle: '(32)' },
+										{ title: 'Commodity ', subtitle: '(12)' },
+										{ title: 'Interest Rate  ', subtitle: '(32)' },
+										{ title: 'Multi-Asset  ', subtitle: '(12)' }
+									]
+								},
+								{
+									title: 'Geography',
+									list: [
+										{ title: 'Canada ', subtitle: '(32)' },
+										{ title: 'US ', subtitle: '(12)' },
+										{ title: 'Interes Rate ', subtitle: '(32)' },
+										{ title: 'Multi-Asset ', subtitle: '(12)' }
+									]
+								},
+								{
+									title: 'Advanced Search',
+									selectos: [
+										{ type:  'Type'},
+										{ type: 'Structure'},
+										{ type: 'Status'},
+										{ type: 'Underlying'},
+										{ type: 'Asset Class'}
+									]
+								},
+								{
+									title: 'Issue Date Range'
+								},
+								{
+									title: 'Maturity Date Range'
+								}
+							] %}
+								<div class="sidebar__box">
+									<a href="#" class="sidebar__subtitle">{{item.title}} <i class="material-icons sidebar__arrow">keyboard_arrow_up</i></a>
+									<ul class="sidebar__list">
+										{% for item in item.list %}
+											<li class="sidebar__item">
+												{{mixins.checkbox(item)}}
+											</li>
+										{% endfor %}
+
+										{% for item in item.selectos %}
+											<li class="sidebar__item">
+												{{mixins.select(item)}}
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							{% endfor %}
+						</div>
+						<div class="tabs__body">
+							<ul class="tags">
+								{% for item in [
+									{ title: 'CAD' }
+								] %}
+									<li class="tags__item">
+										<div class="tags__title">{{item.title}}</div>
+										<button class="tags__close"></button>
+									</li>
+								{% endfor %}
+							</ul>
+							<div class="products">
+								<div class="products__label"><strong>7</strong> product results</div>
+								<div class="table">
+									<div class="table__thead">
+										<div class="table__tr">
+											<div class="table__th" data-column="product-name">
+												<span class="table__heading">Product Name</span>
+												<i class="material-icons table__arrow">keyboard_arrow_down</i>
+											</div>
+											<div class="table__th" data-column="fundserv">
+												<span class="table__heading">FUNDserv</span>
+											</div>
+											<div class="table__th" data-column="available-until">
+												<span class="table__heading">Available Until</span>
+											</div>
+											<div class="table__th" data-column="term">
+												<span class="table__heading">Term</span>
+											</div>
+											<div class="table__th" data-column="compare">
+												<span class="table__heading">Compare</span>
+												<i class="material-icons table__help icon-help">help_outline</i>
+											</div>
+										</div>
+									</div>
+									<div class="table__tbody">
+										{% for item in range(0,7) %}
+											<div class="table__tr">
+												<div class="table__td" data-column="product-name">
+													<p><a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a></p>
+												</div>
+												<div class="table__td" data-column="fundserv">
+													<p>CBL532</p>
+												</div>
+												<div class="table__td" data-column="available-until">
+													<p>23 Mar 2018</p>
+												</div>
+												<div class="table__td" data-column="term">
+													<p>6 Years</p>
+												</div>
+												<div class="table__td" data-column="compare">
+													{{mixins.checkbox()}}
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
