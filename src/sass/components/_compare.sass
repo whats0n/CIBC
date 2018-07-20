@@ -1,0 +1,91 @@
+.compare
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	background-color: #EEEEEE
+	padding: 25px 0
+	&-wrapper
+		position: relative
+		padding: 0 20px
+	&__title
+		+f(20px, 400, normal)
+		display: inline-block
+		vertical-align: middle
+		margin-right: 75px
+	&__items
+		display: inline-block
+		max-width: 830px
+		width: 100%
+		vertical-align: middle
+		margin: 0 auto
+		font-size: 0
+		margin: 0 -12px
+	&__btn-close
+		width: 35px
+		height: 35px
+		background-color: #666666
+		border-radius: 50%
+		display: block
+		position: absolute
+		top: -20px
+		left: 100%
+		transform: translateX(-50%)
+		text-decoration: none
+		transition: background-color .24s ease-in-out, border-color .24s ease-in-out
+		border: 1px solid rgba($white, 0)
+		&:focus,
+		&:active,
+		&:hover
+			background-color: $white
+			border-color: #666666
+			&:before,
+			&:after
+				background-color: #666666
+		+hover
+			&:before,
+			&:after
+				background-color: #666666
+		&:before,
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate3d(-50%, -50%, 0) rotateZ(45deg)
+			background-color: $white
+			transition: background-color .24s ease-in-out
+		&:before
+			width: 10px
+			height: 1px
+		&:after
+			width: 1px
+			height: 10px
+	&__col
+		width: 33.3333%
+		display: inline-block
+		vertical-align: middle
+		padding: 0 12px
+	&__item
+		padding: 18px 15px
+		border-radius: 3px
+		background-color: $white
+		position: relative
+		width: 100%
+	&__item p
+		color: $red
+		+f(16px, 700, 1)
+		font-family: $familySecondary
+	&__btn
+		vertical-align: bottom
+		padding: 8px 20px
+		margin-left: 20px
+	&__btn-counter
+		width: 24px
+		height: 24px
+		border: 1px solid $white
+		display: inline-block
+		border-radius: 50%
+		line-height: 24px
+		text-align: center
