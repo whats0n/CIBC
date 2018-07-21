@@ -69,13 +69,16 @@
 {% endmacro %}
 
 {% macro select(props) %}
-<div class="select {{props.classList}}">
-	<select class="select__control">
-		{% for item in props.options %}
-			<option value="{{item}}" class="select__option">{{item}}</option>
-		{% endfor %}
-	</select>
-	<i class="select__icon"></i>
+<div class="form-group">
+	<label class="form-group__label">{{props.label}}</label>
+	<div class="select {{props.classList}}">
+		<select class="select__control">
+			{% for item in props.options %}
+				<option value="{{item}}" class="select__option">{{item}}</option>
+			{% endfor %}
+		</select>
+		<i class="select__icon"></i>
+	</div>
 </div>
 {% endmacro %}
 
@@ -83,16 +86,24 @@
 <div class="form-group">
 	<label class="form-group__label">{{props.label}}</label>
 	{% if props.date %}
-	<div class="form-group__row">
-		<div class="form-group__col">
-			<input class="form-group__input" type="text" placeholder="From">
+		<div class="form-group__row">
+			<div class="form-group__col">
+				<input class="form-group__input" type="text" placeholder="From">
+			</div>
+			<div class="form-group__col">
+				<input class="form-group__input" type="text" placeholder="To">
+			</div>
 		</div>
-		<div class="form-group__col">
-			<input class="form-group__input" type="text" placeholder="To">
+	{% elif props.bordered %}
+		<div class="form-group__row form-group_navigate">
+				<button type="buton" class="input__btn navigate_btn">
+					<i class="material-icons">chevron_left</i>
+				</button>
+				<input class="form-group__input" type="text" placeholder="This Month">
+				<button type="buton" class="input__btn navigate_btn"><i class="material-icons">chevron_right</i></button>
 		</div>
-	</div>
 	{% else %}
-		<input class="form-group__input" type="{{props.type}}" placeholder="{{props.placeholder}}">
+		<input class="form-group__input {{props.classList}}" type="{{props.type}}" placeholder="{{props.placeholder}}">
 	{% endif %}
 </div>
 {% endmacro %}

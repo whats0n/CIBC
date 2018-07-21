@@ -9,6 +9,8 @@
 	&__thead
 		display: table-header-group
 		background: #F5F5F5
+		&.thead__white
+			background-color: $white
 	&__tfooter
 		display: table-footer-group
 	&__tbody
@@ -31,6 +33,16 @@
 			width: 12%
 		+col('compare')
 			width: 20%
+		+col('event-date')
+			width: 13%
+		+col('event-type')
+			width: 22%
+		+col('name')
+			width: 25%
+		+col('code')
+			width: 12%
+		+col('status')
+			width: 11%
 	&__th
 		padding: 18px 18px 17px
 		border-top: 1px solid $lightGrayDarker

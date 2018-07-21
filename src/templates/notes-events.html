@@ -1,0 +1,126 @@
+---
+title: Notes Events page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="page">
+		<div class="inner page__inner">
+			<h1 class="title-xl page__title">My Notes</h1>
+			<div class="tabs">
+				<div class="tabs__controls">
+					{% for item in [
+						{title: 'Portfolio'},
+						{title: 'Watchlist'},
+						{title: 'Notes Events', active: true}
+					] %}
+						<a href="#" class="tabs__control {% if item.active %}is-active{% endif %}">{{item.title}}</a>
+					{% endfor %}
+				</div>
+				<div class="tabs__container">
+					<div class="tabs__content">
+						{% include "partials/components/_sidebar.html" %}
+						<div class="tabs__body">
+							<div class="products">
+								<div class="products__labels">
+									<div class="products__label"><strong>May 2018</strong></div>
+								</div>
+								<div class="products__groups">
+										{% for item in [
+											{
+												title: 'F-Class',
+												list: [
+												{
+													type: 'select',
+													props: {
+														label: 'Status',
+														options: ['All', 'All 2', 'All 3'],
+														classList: 'select_xs'
+													}
+												},
+												{
+													type: 'select',
+													props: {
+														label: 'Veiw By',
+														options: ['Month', 'Month 2', 'Month 3'],
+														classList: 'select_xs'
+													}
+												},
+												{
+													type: 'input',
+													props: {
+														label: 'Navigate To',
+														placeholder: 'This Month',
+														bordered: true
+													}
+												}
+												]
+											}
+										] %}
+											{% for item in item.list %}
+												{{mixins[item.type](item.props)}}
+											{% endfor %}
+
+											<div class="form-group">
+												<button type="buton" class="input__btn">{{mixins.icon('date')}}</button>
+											</div>
+									{% endfor %}
+									<a href="#" class="products__link link">Export to Exel {{mixins.icon('exel')}}</a>
+								</div>
+								<div class="table">
+									<div class="table__thead thead__white">
+										<div class="table__tr">
+											<div class="table__th" data-column="event-date">
+													<span class="table__heading">Event Date</span>
+											</div>
+											<div class="table__th" data-column="name">
+												<span class="table__heading">Name</span>
+												<i class="material-icons table__arrow">keyboard_arrow_down</i>
+											</div>
+											<div class="table__th" data-column="event-type">
+												<span class="table__heading">Event Type</span>
+											</div>
+											<div class="table__th" data-column="fundserv">
+												<span class="table__heading">FUNDserv</span>
+											</div>
+											<div class="table__th" data-column="code">
+												<span class="table__heading">ADP Code</span>
+											</div>
+											<div class="table__th" data-column="status">
+												<span class="table__heading">Status</span>
+											</div>
+										</div>
+									</div>
+									<div class="table__tbody">
+										{% for item in range(0,4) %}
+											<div class="table__tr">
+												<div class="table__td" data-column="event-date">
+														<p>6 Apr 2018</p>
+												</div>
+												<div class="table__td" data-column="name">
+													<p><a href="#" class="link link_inherit">CIBC Autocallable Coupon Notes linked to VanEck VectorsTM Gold Miners ETF</a></p>
+												</div>
+												<div class="table__td" data-column="event-type">
+													<p>Call Event: NOT CALLED</p>
+												</div>
+												<div class="table__td" data-column="fundserv">
+													<p>CBL532</p>
+												</div>
+												<div class="table__td" data-column="code">
+													<p>5BRBYG6</p>
+												</div>
+												<div class="table__td" data-column="status">
+													<p>Watching</p>
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
