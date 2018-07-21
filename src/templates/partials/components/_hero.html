@@ -25,5 +25,43 @@
 			</div>
 		</div>
 	</div>
+
+	{% if hero.hasQuestion %}
+		<!-- begin questions -->
+		<div class="questions">
+			<div class="inner">
+				<div class="questions__content">
+					<div class="questions__text">
+						<p class="questions__counter">Question <span class="questions__counters"> 1/5</span></p>
+						<h2 class="questions__issue">What currency are you looking for? </h2>
+					</div>
+
+					{% for item in [
+						{
+							title: 'Geography',
+							list: [
+								{
+									type: 'checkbox',
+									props:  { title: 'CAD' }
+								},
+								{
+									type: 'checkbox',
+									props:  { title: 'USD' }
+								}
+							]
+						}
+					] %}
+						{% for item in item.list %}
+							{{mixins[item.type](item.props)}}
+						{% endfor %}
+					{% endfor %}
+
+					<a href="#" class="link questions__link">Previous Question</a>
+					<a href="#" class="btn questions__btn">Next Question</a>
+				</div>
+			</div>
+		</div>
+		<!-- end questions -->
+	{% endif %}
 </div>
 <!-- end hero -->

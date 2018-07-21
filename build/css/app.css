@@ -5335,6 +5335,7 @@ body {
 
 .hero {
   background-color: #F5F5F5;
+  position: relative;
 }
 
 .hero_sm .hero__info {
@@ -6225,6 +6226,11 @@ body {
 .tabs__body {
   float: right;
   width: 75%;
+}
+
+.sidebar {
+  min-height: 100%;
+  height: 100%;
 }
 
 .sidebar__box {
@@ -7203,6 +7209,50 @@ body {
   display: inline-block;
   vertical-align: top;
   padding: 0 5px;
+}
+
+.questions {
+  background-color: rgba(255, 255, 255, 0.71);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.questions__content {
+  padding: 35px 0;
+}
+
+.questions__text {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 40px;
+}
+
+.questions__issue {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.questions__counter {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.questions .checkbox {
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+.questions__link {
+  margin: 0 30px 0 60px;
+  vertical-align: middle;
+}
+
+.questions__btn {
+  vertical-align: middle;
 }
 
 @media (prefers-reduced-motion: reduce) {

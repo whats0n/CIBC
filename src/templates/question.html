@@ -1,0 +1,79 @@
+---
+title: Question page
+hero: {
+	title: 'In less than a minute, find Notes that...',
+	img: 'bg-hero-question',
+	description: 'Find Notes that suit your investment needs using  our simple InterviewSearch™.',
+	hasQuestion: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% include 'partials/components/_hero.html' %}
+	<div class="page">
+		<div class="inner page__inner">
+			{% include "partials/components/_sidebar.html" %}
+			<div class="tabs__body">
+				<ul class="tags">
+					{% for item in [
+						{ title: 'F-Class' },
+						{ title: 'CAD' }
+					] %}
+						<li class="tags__item">
+							<div class="tags__title">{{item.title}}</div>
+							<button class="tags__close"></button>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="products">
+					<div class="products__label"><strong>7</strong> product results</div>
+					<div class="table">
+						<div class="table__thead">
+							<div class="table__tr">
+								<div class="table__th" data-column="product-name">
+									<span class="table__heading">Product Name</span>
+									<i class="material-icons table__arrow">keyboard_arrow_down</i>
+								</div>
+								<div class="table__th" data-column="fundserv">
+									<span class="table__heading">FUNDserv</span>
+								</div>
+								<div class="table__th" data-column="available-until">
+									<span class="table__heading">Available Until</span>
+								</div>
+								<div class="table__th" data-column="term">
+									<span class="table__heading">Term</span>
+								</div>
+								<div class="table__th" data-column="compare">
+									<span class="table__heading">Compare</span>
+									<i class="material-icons table__help icon-help">help_outline</i>
+								</div>
+							</div>
+						</div>
+						<div class="table__tbody">
+							{% for item in range(0,7) %}
+								<div class="table__tr">
+									<div class="table__td" data-column="product-name">
+										<p><a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a></p>
+									</div>
+									<div class="table__td" data-column="fundserv">
+										<p>CBL532</p>
+									</div>
+									<div class="table__td" data-column="available-until">
+										<p>23 Mar 2018</p>
+									</div>
+									<div class="table__td" data-column="term">
+										<p>6 Years</p>
+									</div>
+									<div class="table__td" data-column="compare">
+										{{mixins.checkbox()}}
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
