@@ -74,11 +74,25 @@
 		{% for item in props.options %}
 			<option value="{{item}}" class="select__option">{{item}}</option>
 		{% endfor %}
-
-		{% if props.type %}
-			<option value="{{props.type}}" class="select__option">{{props.type}}</option>
-		{% endif %}
 	</select>
 	<i class="select__icon"></i>
+</div>
+{% endmacro %}
+
+{% macro input(props) %}
+<div class="form-group">
+	<label class="form-group__label">{{props.label}}</label>
+	{% if props.date %}
+	<div class="form-group__row">
+		<div class="form-group__col">
+			<input class="form-group__input" type="text" placeholder="From">
+		</div>
+		<div class="form-group__col">
+			<input class="form-group__input" type="text" placeholder="To">
+		</div>
+	</div>
+	{% else %}
+		<input class="form-group__input" type="{{props.type}}" placeholder="{{props.placeholder}}">
+	{% endif %}
 </div>
 {% endmacro %}

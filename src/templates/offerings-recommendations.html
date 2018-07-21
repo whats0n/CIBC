@@ -1,5 +1,5 @@
 ---
-title: Current Recommendations
+title: Current Offerings - Recommendations
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -11,8 +11,8 @@ title: Current Recommendations
 			<div class="tabs">
 				<div class="tabs__controls tabs__col-2">
 					{% for item in [
-						{ title: 'All' },
-						{ title: 'Recommendations', active: true }
+						{ title: 'All', active: true },
+						{ title: 'Recommendations' }
 					] %}
 						<a href="#" class="tabs__control {% if item.active %}is-active{% endif %}">{{item.title}}</a>
 					{% endfor %}
@@ -40,42 +40,110 @@ title: Current Recommendations
 								{
 									title: 'F-Class',
 									list: [
-										{ title: 'F-Class', subtitle: '(3)' }
+										{
+											type: 'checkbox',
+											props: {title: 'F-Class', subtitle: '(3)' }
+										}
 									]
 								},
 								{
 									title: 'Currency',
 									list: [
-										{ attrs: 'checked', title: 'CAD', subtitle: '(32)' },
-										{ title: 'USD', subtitle: '(12)' }
+										{
+											type: 'checkbox',
+											props: { attrs: 'checked', title: 'CAD', subtitle: '(32)' }
+										},
+										{
+											type: 'checkbox',
+											props: { title: 'USD', subtitle: '(12)' }
+										}
 									]
 								},
 								{
 									title: 'Asset Class',
 									list: [
-										{ title: 'Equity ', subtitle: '(32)' },
-										{ title: 'Commodity ', subtitle: '(12)' },
-										{ title: 'Interest Rate  ', subtitle: '(32)' },
-										{ title: 'Multi-Asset  ', subtitle: '(12)' }
+										{
+											type: 'checkbox',
+											props: { title: 'Equity', subtitle: '(32)' }
+										},
+										{
+											type: 'checkbox',
+											props: { title: 'Commodity', subtitle: '(12)' }
+										},
+										{
+											type: 'checkbox',
+											props: { title: 'Interest Rate', subtitle: '(32)' }
+										},
+										{
+											type: 'checkbox',
+											props: { title: 'Multi-Asset', subtitle: '(12)' }
+										}
 									]
 								},
 								{
 									title: 'Geography',
 									list: [
-										{ title: 'Canada ', subtitle: '(32)' },
-										{ title: 'US ', subtitle: '(12)' },
-										{ title: 'Interes Rate ', subtitle: '(32)' },
-										{ title: 'Multi-Asset ', subtitle: '(12)' }
+										{
+											type: 'checkbox',
+											props:  { title: 'Canada', subtitle: '(32)' }
+										},
+										{
+											type: 'checkbox',
+											props:  { title: 'US', subtitle: '(12)' }
+										}
 									]
 								},
 								{
 									title: 'Advanced Search',
-									selectos: [
-										{ type:  'Type'},
-										{ type: 'Structure'},
-										{ type: 'Status'},
-										{ type: 'Underlying'},
-										{ type: 'Asset Class'}
+									list: [
+										{
+											type: 'input',
+											props: { placeholder: 'Note Name', label: 'Name' }
+										},
+										{
+											type: 'select',
+											props: {
+												options: ['Type', 'Type 2', 'Type 3']
+											}
+										},
+										{
+											type: 'select',
+											props: {
+												options: ['Structure', 'Structure 2', 'Structure 3']
+											}
+										},
+										{
+											type: 'select',
+											props: {
+												options: ['Status', 'Status 2', 'Status 3']
+											}
+										},
+										{
+											type: 'select',
+											props: {
+												options: ['Underlying', 'Underlying 2', 'Underlying 3']
+											}
+										},
+										{
+											type: 'select',
+											props: {
+												options: ['Asset Class', 'Asset Class 2', 'Asset Class 3']
+											}
+										},
+										{
+											type: 'input',
+											props: {
+												date: true,
+												label: 'Issue Date Range'
+											}
+										},
+										{
+											type: 'input',
+											props: {
+												date: true,
+												label: 'Maturity Date Range'
+											}
+										}
 									]
 								}
 							] %}
@@ -84,13 +152,7 @@ title: Current Recommendations
 									<ul class="sidebar__list">
 										{% for item in item.list %}
 											<li class="sidebar__item">
-												{{mixins.checkbox(item)}}
-											</li>
-										{% endfor %}
-
-										{% for item in item.selectos %}
-											<li class="sidebar__item">
-												{{mixins.select(item)}}
+												{{mixins[item.type](item.props)}}
 											</li>
 										{% endfor %}
 									</ul>
