@@ -4,7 +4,7 @@ title: Current Offerings
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
+
 	<div class="page">
 		<div class="inner page__inner">
 			<h1 class="title-xl page__title">Current Offerings</h1>
@@ -24,64 +24,7 @@ title: Current Offerings
 							<h3 class="title-md tabs__title">Current Principal Protected Notes</h3>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm. Duis autem vel eum iriure dolor in hendrerit.</p>
 						</div>
-						<div class="sidebar tabs__sidebar">
-							<div class="sidebar__box">
-								<div class="sidebar__filters">
-									<div class="sidebar__title">
-										<svg version="1.1" width="21.6px" height="23.1px" viewBox="0 0 21.6 23.1" enable-background="new 0 0 21.6 23.1" class="sidebar__title-icon">
-											<polygon fill="none" stroke="#333333" stroke-miterlimit="10" points="13.5,22 13.5,8.5 20.5,0.5 1.1,0.5 8.1,8.5 8.1,17 "/>
-										</svg>
-										<div class="sidebar__title-text">Filter options</div>
-										<i class="material-icons sidebar__title-help icon-help">help_outline</i>
-									</div>
-									<a href="#" class="link link_inherit sidebar__reset">Reset</a>
-								</div>
-							</div>
-							{% for item in [
-								{
-									title: 'F-Class',
-									list: [
-										{ title: 'F-Class', subtitle: '(3)' }
-									]
-								},
-								{
-									title: 'Currency',
-									list: [
-										{ attrs: 'checked', title: 'CAD', subtitle: '(32)' },
-										{ title: 'USD', subtitle: '(12)' }
-									]
-								},
-								{
-									title: 'Asset Class',
-									list: [
-										{ title: 'Equity ', subtitle: '(32)' },
-										{ title: 'Commodity ', subtitle: '(12)' },
-										{ title: 'Interest Rate  ', subtitle: '(32)' },
-										{ title: 'Multi-Asset  ', subtitle: '(12)' }
-									]
-								},
-								{
-									title: 'Geography',
-									list: [
-										{ title: 'Canada ', subtitle: '(32)' },
-										{ title: 'US ', subtitle: '(12)' },
-										{ title: 'Interes Rate ', subtitle: '(32)' },
-										{ title: 'Multi-Asset ', subtitle: '(12)' }
-									]
-								}
-							] %}
-								<div class="sidebar__box">
-									<a href="#" class="sidebar__subtitle">{{item.title}} <i class="material-icons sidebar__arrow">keyboard_arrow_up</i></a>
-									<ul class="sidebar__list">
-										{% for item in item.list %}
-											<li class="sidebar__item">
-												{{mixins.checkbox(item)}}
-											</li>
-										{% endfor %}
-									</ul>
-								</div>
-							{% endfor %}
-						</div>
+						{% include "partials/components/_sidebar.html" %}
 						<div class="tabs__body">
 							<ul class="tags">
 								{% for item in [
