@@ -6548,7 +6548,7 @@ body {
   width: 22%;
 }
 
-.table__td[data-column*="name"], .table__th[data-column*="name"] {
+.table__td[data-column*="denotation"], .table__th[data-column*="denotation"] {
   width: 25%;
 }
 
