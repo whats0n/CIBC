@@ -6095,7 +6095,7 @@ body {
   line-height: normal;
 }
 
-.page_historical .tabs__header-controls .link, .page_historical .tabs__header-controls .select {
+.page_historical .tabs__header-controls .link, .page_historical .tabs__header-controls .form-group {
   display: inline-block;
   vertical-align: middle;
 }
