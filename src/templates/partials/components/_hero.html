@@ -8,11 +8,11 @@
 						{% if hero.title %}
 							<h2 class="title-lg hero__title">{{hero.title}}</h2>
 						{% endif %}
-						{% if hero.btn %}
-							<a href="#" class="btn hero__btn">{{hero.btn}}</a>
-						{% endif %}
 						{% if hero.description %}
 							<div class="hero__description">{{hero.description}}</div>
+						{% endif %}
+						{% if hero.btn %}
+							<a href="#" class="btn hero__btn">{{hero.btn}}</a>
 						{% endif %}
 						{% if hero.heroSubTitle %}
 							<h3 class="label hero__subtitle">{{hero.heroSubTitle | safe}}</h3>
