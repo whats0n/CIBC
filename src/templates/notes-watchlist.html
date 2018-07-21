@@ -1,5 +1,5 @@
 ---
-title: Current Recommendations
+title: My Notes Watchlist
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -7,22 +7,19 @@ title: Current Recommendations
 
 	<div class="page">
 		<div class="inner page__inner">
-			<h1 class="title-xl page__title">Current Offerings</h1>
+			<h1 class="title-xl page__title">My Notes</h1>
 			<div class="tabs">
-				<div class="tabs__controls tabs__col-2">
+				<div class="tabs__controls">
 					{% for item in [
-						{ title: 'All' },
-						{ title: 'Recommendations', active: true }
+						{title: 'Portfolio'},
+						{title: 'Watchlist', active: true},
+						{title: 'Notes Events'}
 					] %}
 						<a href="#" class="tabs__control {% if item.active %}is-active{% endif %}">{{item.title}}</a>
 					{% endfor %}
 				</div>
 				<div class="tabs__container">
 					<div class="tabs__content">
-						<div class="tabs__header">
-							<h3 class="title-md tabs__title">Current Principal Protected Notes</h3>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm. Duis autem vel eum iriure dolor in hendrerit.</p>
-						</div>
 						<div class="sidebar tabs__sidebar">
 							<div class="sidebar__box">
 								<div class="sidebar__filters">
@@ -67,16 +64,6 @@ title: Current Recommendations
 										{ title: 'Interes Rate ', subtitle: '(32)' },
 										{ title: 'Multi-Asset ', subtitle: '(12)' }
 									]
-								},
-								{
-									title: 'Advanced Search',
-									selectos: [
-										{ type:  'Type'},
-										{ type: 'Structure'},
-										{ type: 'Status'},
-										{ type: 'Underlying'},
-										{ type: 'Asset Class'}
-									]
 								}
 							] %}
 								<div class="sidebar__box">
@@ -85,12 +72,6 @@ title: Current Recommendations
 										{% for item in item.list %}
 											<li class="sidebar__item">
 												{{mixins.checkbox(item)}}
-											</li>
-										{% endfor %}
-
-										{% for item in item.selectos %}
-											<li class="sidebar__item">
-												{{mixins.select(item)}}
 											</li>
 										{% endfor %}
 									</ul>
@@ -109,34 +90,45 @@ title: Current Recommendations
 								{% endfor %}
 							</ul>
 							<div class="products">
-								<div class="products__label"><strong>7</strong> product results</div>
+								<div class="products__labels">
+									<div class="products__label"><strong>7</strong> product results</div>
+								</div>
+								<a href="#" class="products__link link">Export to Exel {{mixins.icon('exel')}}</a>
 								<div class="table">
 									<div class="table__thead">
 										<div class="table__tr">
 											<div class="table__th" data-column="product-name">
-												<span class="table__heading">Product Name</span>
-												<i class="material-icons table__arrow">keyboard_arrow_down</i>
+												<div class="watchlist__controls">
+													{{mixins.checkbox()}}
+													<span class="table__heading">Product Name</span>
+													<i class="material-icons table__arrow">keyboard_arrow_down</i>
+												</div>
 											</div>
 											<div class="table__th" data-column="fundserv">
 												<span class="table__heading">FUNDserv</span>
 											</div>
 											<div class="table__th" data-column="available-until">
-												<span class="table__heading">Available Until</span>
+												<span class="table__heading">Issue Date</span>
+											</div>
+											<div class="table__th" data-column="available-until">
+												<span class="table__heading">Issue Date</span>
 											</div>
 											<div class="table__th" data-column="term">
 												<span class="table__heading">Term</span>
 											</div>
 											<div class="table__th" data-column="compare">
-												<span class="table__heading">Compare</span>
-												<i class="material-icons table__help icon-help">help_outline</i>
+												<span class="table__heading">Category</span>
 											</div>
 										</div>
 									</div>
 									<div class="table__tbody">
-										{% for item in range(0,7) %}
+										{% for item in range(0,4) %}
 											<div class="table__tr">
 												<div class="table__td" data-column="product-name">
-													<p><a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a></p>
+													<div class="watchlist__controls">
+														{{mixins.checkbox()}}
+														<p><a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a></p>
+													</div>
 												</div>
 												<div class="table__td" data-column="fundserv">
 													<p>CBL532</p>
@@ -145,16 +137,22 @@ title: Current Recommendations
 													<p>23 Mar 2018</p>
 												</div>
 												<div class="table__td" data-column="term">
+													<p>1 Apr 2018</p>
+												</div>
+												<div class="table__td" data-column="category">
 													<p>6 Years</p>
 												</div>
-												<div class="table__td" data-column="compare">
-													{{mixins.checkbox()}}
+												<div class="table__td" data-column="category">
+													<p>PPN</p>
+													<a href="#" class="tags__close"></a>
 												</div>
 											</div>
 										{% endfor %}
 									</div>
 								</div>
 							</div>
+
+							<div class="products__footnote"><p>Called, matured or sold Notes will no longer appear in your Portfolio.</p></div>
 						</div>
 					</div>
 				</div>

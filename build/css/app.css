@@ -145,6 +145,12 @@ html {
   box-sizing: inherit;
 }
 
+.icon-exel {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-facebook {
   width: 0.53em;
   height: 1em;
@@ -5060,6 +5066,10 @@ body {
   border-color: #fff;
 }
 
+.link .icon {
+  fill: currentColor;
+}
+
 .submenu {
   background: #F4F4F3;
   font-family: Arial, Helvetica, sans-serif;
@@ -6338,11 +6348,73 @@ body {
   transform: translate3d(-50%, -50%, 0) rotate(-45deg);
 }
 
+.products:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
 .products__label {
   padding: 20px 0;
   font-size: 20px;
   font-weight: 400;
   line-height: 1;
+}
+
+.products__labels {
+  display: inline-block;
+  font-size: 0;
+}
+
+.products__labels .products__label {
+  display: inline-block;
+}
+
+.products__labels .products__label:not(:first-child) {
+  margin-left: 50px;
+}
+
+.products__remove {
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.products__remove .tags__close {
+  left: 100%;
+}
+
+.products__remove .tags__close:before,
+.products__remove .tags__close:after {
+  width: 13px;
+  border-top-color: #AE0D1C;
+}
+
+.products__link {
+  float: right;
+  margin: 22px 0;
+}
+
+.products__footnote {
+  padding: 30px 18px;
+}
+
+.products__footnote p {
+  color: #666666;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.products .table__td {
+  position: relative;
+}
+
+.products .table__td .tags__close {
+  top: 11px;
+  right: 10px;
+  height: 30px;
 }
 
 .table {
@@ -6430,6 +6502,22 @@ body {
 .table__heading, .table__arrow, .table__help {
   display: inline-block;
   vertical-align: top;
+}
+
+.table .watchlist__controls:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.table .watchlist__controls .checkbox {
+  margin-top: 0;
+  margin-right: 20px;
+  float: left;
+}
+
+.table .watchlist__controls p {
+  overflow: hidden;
 }
 
 .table .checkbox {

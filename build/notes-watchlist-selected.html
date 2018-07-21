@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Current Recommendations</title>
+    <title>My Notes Watchlist - 2 product selected</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -70,18 +70,15 @@
       <!-- end header -->
       <div class="page">
         <div class="inner page__inner">
-          <h1 class="title-xl page__title">Current Offerings</h1>
+          <h1 class="title-xl page__title">My Notes</h1>
           <div class="tabs">
-            <div class="tabs__controls tabs__col-2">
-              <a href="#" class="tabs__control ">All</a>
-              <a href="#" class="tabs__control is-active">Recommendations</a>
+            <div class="tabs__controls">
+              <a href="#" class="tabs__control ">Portfolio</a>
+              <a href="#" class="tabs__control is-active">Watchlist</a>
+              <a href="#" class="tabs__control ">Notes Events</a>
             </div>
             <div class="tabs__container">
               <div class="tabs__content">
-                <div class="tabs__header">
-                  <h3 class="title-md tabs__title">Current Principal Protected Notes</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm. Duis autem vel eum iriure dolor in hendrerit.</p>
-                </div>
                 <div class="sidebar tabs__sidebar">
                   <div class="sidebar__box">
                     <div class="sidebar__filters">
@@ -254,53 +251,6 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="sidebar__box">
-                    <a href="#" class="sidebar__subtitle">Advanced Search
-                      <i class="material-icons sidebar__arrow">keyboard_arrow_up</i>
-                    </a>
-                    <ul class="sidebar__list">
-                      <li class="sidebar__item">
-                        <div class="select ">
-                          <select class="select__control">
-                            <option value="Type" class="select__option">Type</option>
-                          </select>
-                          <i class="select__icon"></i>
-                        </div>
-                      </li>
-                      <li class="sidebar__item">
-                        <div class="select ">
-                          <select class="select__control">
-                            <option value="Structure" class="select__option">Structure</option>
-                          </select>
-                          <i class="select__icon"></i>
-                        </div>
-                      </li>
-                      <li class="sidebar__item">
-                        <div class="select ">
-                          <select class="select__control">
-                            <option value="Status" class="select__option">Status</option>
-                          </select>
-                          <i class="select__icon"></i>
-                        </div>
-                      </li>
-                      <li class="sidebar__item">
-                        <div class="select ">
-                          <select class="select__control">
-                            <option value="Underlying" class="select__option">Underlying</option>
-                          </select>
-                          <i class="select__icon"></i>
-                        </div>
-                      </li>
-                      <li class="sidebar__item">
-                        <div class="select ">
-                          <select class="select__control">
-                            <option value="Asset Class" class="select__option">Asset Class</option>
-                          </select>
-                          <i class="select__icon"></i>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="tabs__body">
                   <ul class="tags">
@@ -310,36 +260,66 @@
                     </li>
                   </ul>
                   <div class="products">
-                    <div class="products__label">
-                      <strong>7</strong> product results</div>
+                    <div class="products__labels">
+                      <div class="products__label">
+                        <strong>7</strong> product results</div>
+                      <div class="products__label">
+                        <strong>2</strong> product selected</div>
+                    </div>
+                    <a href="#" class="products__remove link">Remove from List
+                      <i class="tags__close"></i>
+                    </a>
+                    <a href="#" class="products__link link">Export to Exel
+                      <svg class="icon icon-exel">
+                        <use xlink:href="img/sprite.svg#icon-exel"></use>
+                      </svg>
+                    </a>
                     <div class="table">
                       <div class="table__thead">
                         <div class="table__tr">
                           <div class="table__th" data-column="product-name">
-                            <span class="table__heading">Product Name</span>
-                            <i class="material-icons table__arrow">keyboard_arrow_down</i>
+                            <div class="watchlist__controls">
+                              <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__icon">
+                                  <i class="material-icons checkbox__icon-in">check</i>
+                                </span>
+                              </label>
+                              <span class="table__heading">Product Name</span>
+                              <i class="material-icons table__arrow">keyboard_arrow_down</i>
+                            </div>
                           </div>
                           <div class="table__th" data-column="fundserv">
                             <span class="table__heading">FUNDserv</span>
                           </div>
                           <div class="table__th" data-column="available-until">
-                            <span class="table__heading">Available Until</span>
+                            <span class="table__heading">Issue Date</span>
+                          </div>
+                          <div class="table__th" data-column="available-until">
+                            <span class="table__heading">Issue Date</span>
                           </div>
                           <div class="table__th" data-column="term">
                             <span class="table__heading">Term</span>
                           </div>
                           <div class="table__th" data-column="compare">
-                            <span class="table__heading">Compare</span>
-                            <i class="material-icons table__help icon-help">help_outline</i>
+                            <span class="table__heading">Category</span>
                           </div>
                         </div>
                       </div>
                       <div class="table__tbody">
                         <div class="table__tr">
                           <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
+                            <div class="watchlist__controls">
+                              <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" checked="">
+                                <span class="checkbox__icon">
+                                  <i class="material-icons checkbox__icon-in">check</i>
+                                </span>
+                              </label>
+                              <p>
+                                <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
+                              </p>
+                            </div>
                           </div>
                           <div class="table__td" data-column="fundserv">
                             <p>CBL532</p>
@@ -348,22 +328,29 @@
                             <p>23 Mar 2018</p>
                           </div>
                           <div class="table__td" data-column="term">
+                            <p>1 Apr 2018</p>
+                          </div>
+                          <div class="table__td" data-column="category">
                             <p>6 Years</p>
                           </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
+                          <div class="table__td" data-column="category">
+                            <p>PPN</p>
+                            <a href="#" class="tags__close"></a>
                           </div>
                         </div>
                         <div class="table__tr">
                           <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
+                            <div class="watchlist__controls">
+                              <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" checked="">
+                                <span class="checkbox__icon">
+                                  <i class="material-icons checkbox__icon-in">check</i>
+                                </span>
+                              </label>
+                              <p>
+                                <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
+                              </p>
+                            </div>
                           </div>
                           <div class="table__td" data-column="fundserv">
                             <p>CBL532</p>
@@ -372,22 +359,29 @@
                             <p>23 Mar 2018</p>
                           </div>
                           <div class="table__td" data-column="term">
+                            <p>1 Apr 2018</p>
+                          </div>
+                          <div class="table__td" data-column="category">
                             <p>6 Years</p>
                           </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
+                          <div class="table__td" data-column="category">
+                            <p>PPN</p>
+                            <a href="#" class="tags__close"></a>
                           </div>
                         </div>
                         <div class="table__tr">
                           <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
+                            <div class="watchlist__controls">
+                              <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__icon">
+                                  <i class="material-icons checkbox__icon-in">check</i>
+                                </span>
+                              </label>
+                              <p>
+                                <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
+                              </p>
+                            </div>
                           </div>
                           <div class="table__td" data-column="fundserv">
                             <p>CBL532</p>
@@ -396,22 +390,29 @@
                             <p>23 Mar 2018</p>
                           </div>
                           <div class="table__td" data-column="term">
+                            <p>1 Apr 2018</p>
+                          </div>
+                          <div class="table__td" data-column="category">
                             <p>6 Years</p>
                           </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
+                          <div class="table__td" data-column="category">
+                            <p>PPN</p>
+                            <a href="#" class="tags__close"></a>
                           </div>
                         </div>
                         <div class="table__tr">
                           <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
+                            <div class="watchlist__controls">
+                              <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__icon">
+                                  <i class="material-icons checkbox__icon-in">check</i>
+                                </span>
+                              </label>
+                              <p>
+                                <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
+                              </p>
+                            </div>
                           </div>
                           <div class="table__td" data-column="fundserv">
                             <p>CBL532</p>
@@ -420,91 +421,21 @@
                             <p>23 Mar 2018</p>
                           </div>
                           <div class="table__td" data-column="term">
+                            <p>1 Apr 2018</p>
+                          </div>
+                          <div class="table__td" data-column="category">
                             <p>6 Years</p>
                           </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="table__tr">
-                          <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
-                          </div>
-                          <div class="table__td" data-column="fundserv">
-                            <p>CBL532</p>
-                          </div>
-                          <div class="table__td" data-column="available-until">
-                            <p>23 Mar 2018</p>
-                          </div>
-                          <div class="table__td" data-column="term">
-                            <p>6 Years</p>
-                          </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="table__tr">
-                          <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
-                          </div>
-                          <div class="table__td" data-column="fundserv">
-                            <p>CBL532</p>
-                          </div>
-                          <div class="table__td" data-column="available-until">
-                            <p>23 Mar 2018</p>
-                          </div>
-                          <div class="table__td" data-column="term">
-                            <p>6 Years</p>
-                          </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="table__tr">
-                          <div class="table__td" data-column="product-name">
-                            <p>
-                              <a href="#" class="link link_inherit">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</a>
-                            </p>
-                          </div>
-                          <div class="table__td" data-column="fundserv">
-                            <p>CBL532</p>
-                          </div>
-                          <div class="table__td" data-column="available-until">
-                            <p>23 Mar 2018</p>
-                          </div>
-                          <div class="table__td" data-column="term">
-                            <p>6 Years</p>
-                          </div>
-                          <div class="table__td" data-column="compare">
-                            <label class="checkbox">
-                              <input type="checkbox" class="checkbox__input">
-                              <span class="checkbox__icon">
-                                <i class="material-icons checkbox__icon-in">check</i>
-                              </span>
-                            </label>
+                          <div class="table__td" data-column="category">
+                            <p>PPN</p>
+                            <a href="#" class="tags__close"></a>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="products__footnote">
+                    <p>Called, matured or sold Notes will no longer appear in your Portfolio.</p>
                   </div>
                 </div>
               </div>

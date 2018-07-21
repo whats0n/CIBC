@@ -1,4 +1,37 @@
 .products
+	+clr
 	&__label
 		padding: 20px 0
 		+f(20px, 400, 1)
+	&__labels
+		display: inline-block
+		font-size: 0
+		.products__label
+			display: inline-block
+		.products__label:not(:first-child)
+			margin-left: 50px
+	&__remove
+		margin-left: 25px
+		font-size: 16px
+		.tags__close
+			left: 100%
+		.tags__close:before,
+		.tags__close:after
+			width: 13px
+			border-top-color: $red
+	&__link
+		float: right
+		margin: 22px 0
+	&__footnote
+		padding: 30px 18px
+	&__footnote p
+		color: #666666
+		+f(16px, normal, 14px)
+		font-family: $familySecondary
+		font-style: italic
+	.table__td
+		position: relative
+		.tags__close
+			top: 11px
+			right: 10px
+			height: 30px
