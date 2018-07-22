@@ -3,10 +3,15 @@
 	&__checkbox
 		font-size: 0
 		margin-top: 15px
-		.label
+	&__checkbox .input
+		&__label
 			+f(14px, 700, 1)
 			font-family: $familySecondary
 			margin-left: 14px
+		&__label,
+		&__checkbox
+			display: inline-block
+			vertical-align: middle
 	&__label
 		display: block
 		+f(14px, 700, 1)
