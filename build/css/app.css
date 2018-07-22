@@ -7464,8 +7464,8 @@ body {
   top: 120px;
   max-width: 300px;
   width: 100%;
-  font-size: 20px;
   padding: 24px;
+  font-size: 0;
   background-color: #F4F4F3;
 }
 
@@ -7504,7 +7504,7 @@ body {
   color: #A2A2A2;
 }
 
-.popup.popup_login .form-group {
+.popup.popup_login .form-group:not(:last-child) {
   margin-bottom: 20px;
 }
 
