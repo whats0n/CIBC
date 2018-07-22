@@ -4946,6 +4946,11 @@ body {
   background: #4686c6;
 }
 
+.btn.disabled {
+  background: rgba(51, 102, 153, 0.5);
+  cursor: not-allowed;
+}
+
 .btn_white-transparent {
   padding: 9px 19px;
   border: 1px solid #fff;
@@ -7515,6 +7520,141 @@ body {
 .popup.popup_login .form-group__row .btn {
   width: 100%;
   text-align: center;
+}
+
+.register__info p {
+  margin: 30px auto 35px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.register__btn-info {
+  text-align: right;
+}
+
+.register__title {
+  font-weight: 400;
+}
+
+.register__content {
+  max-width: 630px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.register__field {
+  margin: 50px 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.register__field .form-group {
+  margin-bottom: 20px;
+}
+
+.register__field .select {
+  border-bottom: none;
+}
+
+.register__test {
+  margin: 30px 0;
+  font-size: 0;
+}
+
+.register__test-field {
+  margin-left: 35px;
+}
+
+.register__test-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.register__test-title, .register__test-field {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.register__test-field .form-group {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0;
+}
+
+.register__test-field .form-group:not(:last-child) {
+  margin-right: 25px;
+}
+
+.register__test-field .form-group__label, .register__test-field .form-group__checkbox {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.register__test-field .form-group__checkbox {
+  margin-top: 0;
+}
+
+.register__test-field .form-group__label {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.required__controls {
+  border-top: 1px solid rgba(51, 51, 51, 0.3);
+  padding-top: 30px;
+  margin-top: 40px;
+}
+
+.required__star {
+  color: #AE0D1C;
+}
+
+.required__field:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.required__field-row {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.required__field-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.required__field .link {
+  font-family: "Glober", Helvetica, sans-serif;
+  vertical-align: bottom;
+  margin-left: 3px;
+}
+
+.required__field .btn {
+  float: right;
+}
+
+.required__field .form-group__checkbox:not(:last-child) {
+  margin: 0 auto 10px;
+}
+
+.required__field .form-group__checkbox:last-child {
+  margin-top: 0;
+}
+
+.required__field .form-group__checkbox .input__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "Glober", Helvetica, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

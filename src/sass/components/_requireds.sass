@@ -1,0 +1,31 @@
+.required
+	&__controls
+		border-top: 1px solid rgba(51, 51, 51, 0.3)
+		padding-top: 30px
+		margin-top: 40px
+	&__star
+		color: $red
+	&__field
+		+clr
+		&-row
+			font-size: 0
+			display: inline-block
+			vertical-align: top
+		&-label
+			+f(14px, 400, normal)
+			font-family: $familySecondary
+		.link
+			font-family: $familyPrimary
+			vertical-align: bottom
+			margin-left: 3px
+		.btn
+			float: right
+		.form-group__checkbox
+			&:not(:last-child)
+				margin: 0 auto 10px
+			&:last-child
+				margin-top: 0
+			.input
+				&__label
+					+f(16px, 400, 1)
+					font-family: $familyPrimary

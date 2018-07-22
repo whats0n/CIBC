@@ -1,0 +1,275 @@
+---
+title: Register to access Notes, portfolio tools and more.
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="page">
+	<div class="inner page__inner">
+		<div class="register__content">
+			<h2 class="title-lg register__title">Register to access Notes, portfolio tools and more.</h2>
+			<div class="register__field">
+				<h3 class="title-md register__subtitle">Tell us about yourself.</h3>
+				<div class="register__test">
+					<div class="register__test-title">Are you an Advisor?</div>
+					<div class="register__test-field">
+						<div class="form-group">
+							<div class="form-group__checkbox"><input type="checkbox" checked=""></div>
+							<div class="form-group__label">Yes</div>
+						</div>
+
+						<div class="form-group">
+							<div class="form-group__checkbox"><input type="checkbox"></div>
+							<div class="form-group__label">No</div>
+						</div>
+					</div>
+				</div>
+				<form action="/" class="form">
+					<div class="required__field">
+						<div class="required__controls">
+							<div class="required__field-row">
+								<div class="form-group__checkbox">
+									<input type="checkbox" class="input__checkbox">
+									<label class="input__label">I agree to CIBC’s</label>
+									<a href="#" class="link">terms and conditions</a>
+								</div>
+								 <div class="form-group__checkbox">
+									<input type="checkbox" class="input__checkbox">
+									<label class="input__label">Email me a copy of CIBC’s</label>
+									<a href="#" class="link">terms and conditions</a>
+								</div>
+							</div>
+							<button class="btn disabled" type="submit" disabled="">Register</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			{% for item in [
+				{
+					list: [
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'text',
+										label: 'First Name <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'text',
+										label: 'Last Name <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+							options: ['', 'Province 1', 'Province 2', 'Province 3'],
+								group: [
+									{
+										type: 'text',
+										label: 'City <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										select: true,
+										type: 'text',
+										label: 'Province <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'email',
+										label: 'Email <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'email',
+										label: 'Repeat Email <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								options: ['', 'Dealer 1', 'Dealer 2', 'Dealer 3'],
+								group: [
+									{
+										select: true,
+										label: 'Dealer <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'text',
+										label: 'Choose a Username <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'password',
+										label: 'Password <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'password',
+										label: 'Repeat Password <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					list: [
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'text',
+										label: 'First Name <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'text',
+										label: 'Last Name <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'email',
+										label: 'Email <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'email',
+										label: 'Repeat Email <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								options: ['', 'Company 1', 'Company 2', 'Company 3'],
+								group: [
+									{
+										select: true,
+										label: 'Company <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'text',
+										label: 'Choose a Username <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						},
+						{
+							type: 'input',
+							props: {
+								group: [
+									{
+										type: 'password',
+										label: 'Password <span class="required__star">*</span>',
+										required: true
+									},
+									{
+										type: 'password',
+										label: 'Repeat Password <span class="required__star">*</span>',
+										required: true
+									}
+								]
+							}
+						}
+					]
+				}
+			] %}
+				<div class="register__field">
+					<h3 class="title-md register__subtitle">Tell us about yourself.</h3>
+					<div class="register__test">
+						<div class="register__test-title">Are you an Advisor?</div>
+						<div class="register__test-field">
+							<div class="form-group">
+								<div class="form-group__checkbox">
+									<input type="checkbox" {% if loop.index == 1 %}checked=""{% endif %}>
+								</div>
+								<div class="form-group__label">Yes</div>
+							</div>
+
+							<div class="form-group">
+								<div class="form-group__checkbox">
+									<input type="checkbox" {% if loop.index == 2 %}checked=""{% endif %}>
+								</div>
+								<div class="form-group__label">No</div>
+							</div>
+						</div>
+					</div>
+					<form action="/" class="form">
+						{% for item in item.list %}
+							{{mixins[item.type](item.props)}}
+						{% endfor %}
+
+						<div class="required__field">
+							<div class="required__field-label"><span class="required__star">*</span> Required fields</div>
+							<div class="required__controls">
+								<div class="required__field-row">
+									<div class="form-group__checkbox">
+										<input type="checkbox" class="input__checkbox" checked="">
+										<label class="input__label">I agree to CIBC’s</label>
+										<a href="#" class="link">terms and conditions</a>
+									</div>
+
+									 <div class="form-group__checkbox">
+										<input type="checkbox" class="input__checkbox" checked="">
+										<label class="input__label">Email me a copy of CIBC’s</label>
+										<a href="#" class="link">terms and conditions</a>
+									</div>
+								</div>
+								<button class="btn" type="submit">Register</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			{% endfor %}
+
+			<div class="register__field">
+				<h3 class="title-md register__subtitle">Thank you for registering.</h3>
+				<div class="register__info">
+					<p>An email has been sent to verify your address. <br> Please click the link inside the email to complete your registration.</p>
+					<a href="#" class="btn register__btn-info">Back to Homepage</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+.register
+	&__info p
+		margin: 30px auto 35px
+		+f(16px, 600, normal)
+	&__btn
+		&-info
+			text-align: right
+	&__title
+		font-weight: 400
+	&__content
+		max-width: 630px
+		width: 100%
+		margin: 0 auto
+		text-align: left
+	&__field
+		margin: 50px 0
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		.form-group
+			margin-bottom: 20px
+		.select
+			border-bottom: none
+	&__test
+		margin: 30px 0
+		font-size: 0
+		&-field
+			margin-left: 35px
+		&-title
+			+f(16px, 400, 1)
+		&-title,
+		&-field
+			display: inline-block
+			vertical-align: top
+	&__test-field .form-group
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 0
+		&:not(:last-child)
+			margin-right: 25px
+		&__label,
+		&__checkbox
+			display: inline-block
+			vertical-align: top
+		&__checkbox
+			margin-top: 0
+		&__label
+			margin-bottom: 0
+			margin-left: 10px

@@ -86,15 +86,30 @@
 
 {% macro input(props) %}
 <div class="form-group">
-	<label class="form-group__label">{{props.label}}</label>
-	{% if props.date %}
+	{% if props.label %}
+		<label class="form-group__label">{{props.label | safe}}</label>
+	{% endif %}
+	{% if props.group %}
 		<div class="form-group__row">
-			<div class="form-group__col">
-				<input class="form-group__input" type="text" placeholder="From">
-			</div>
-			<div class="form-group__col">
-				<input class="form-group__input" type="text" placeholder="To">
-			</div>
+			{% for item in props.group %}
+				<div class="form-group__col">
+					{% if item.label %}
+						<label class="form-group__label">{{item.label | safe}}</label>
+					{% endif %}
+					{% if item.select %}
+						<div class="select {{props.classList}}">
+							<select class="select__control" {% if item.required %} required="required" {% endif %}>
+								{% for item in props.options %}
+									<option value="{{item}}" class="select__option">{{item}}</option>
+								{% endfor %}
+							</select>
+							<i class="select__icon"></i>
+						</div>
+					{% else %}
+						<input class="form-group__input" type="{{item.type or 'text'}}" {% if item.placeholder %} placeholder="{{item.placeholder}}"{% endif %} {% if item.required %} required="required"{% endif %}>
+					{% endif %}
+				</div>
+			{% endfor %}
 		</div>
 	{% elif props.bordered %}
 		<div class="form-group__row form-group_navigate">
