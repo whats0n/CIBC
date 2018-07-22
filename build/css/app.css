@@ -4905,6 +4905,10 @@ body {
   line-height: 1.5;
 }
 
+body.is-open-modal {
+  overflow-y: hidden;
+}
+
 .inner {
   position: relative;
   padding-left: 20px;
@@ -6844,6 +6848,12 @@ body {
   font-family: "Glober", Helvetica, sans-serif;
 }
 
+.list-caret__desc {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .contact {
   padding: 55px 0 60px;
 }
@@ -7520,6 +7530,54 @@ body {
 .popup.popup_login .form-group__row .btn {
   width: 100%;
   text-align: center;
+}
+
+.popup.popup_removal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.popup.popup_removal .popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 650px;
+  width: 100%;
+  padding: 30px 40px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.popup.popup_removal .popup__content:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.popup.popup_removal .popup__title {
+  margin-bottom: 36px;
+}
+
+.popup.popup_removal .list-caret {
+  margin-bottom: 40px;
+}
+
+.popup.popup_removal .form-group__row {
+  margin: 0;
+  float: right;
+}
+
+.popup.popup_removal .btn:not(:first-child) {
+  margin-left: 20px;
 }
 
 .register__info p {

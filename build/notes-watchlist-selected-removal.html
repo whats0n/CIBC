@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Notes Watchlist</title>
+    <title>My Notes Watchlist - 2 product removal</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
-  <body class="">
+  <body class="is-open-modal">
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
@@ -334,7 +334,12 @@
                     <div class="products__labels">
                       <div class="products__label">
                         <strong>7</strong> product results</div>
+                      <div class="products__label">
+                        <strong>2</strong> product selected</div>
                     </div>
+                    <a href="#" class="products__remove link">Remove from List
+                      <i class="tags__close"></i>
+                    </a>
                     <a href="#" class="products__link link">Export to Exel
                       <svg class="icon icon-exel">
                         <use xlink:href="img/sprite.svg#icon-exel"></use>
@@ -377,7 +382,7 @@
                           <div class="table__td" data-column="product-name">
                             <div class="watchlist__controls">
                               <label class="checkbox">
-                                <input type="checkbox" class="checkbox__input">
+                                <input type="checkbox" class="checkbox__input" checked="">
                                 <span class="checkbox__icon">
                                   <i class="material-icons checkbox__icon-in">check</i>
                                 </span>
@@ -408,7 +413,7 @@
                           <div class="table__td" data-column="product-name">
                             <div class="watchlist__controls">
                               <label class="checkbox">
-                                <input type="checkbox" class="checkbox__input">
+                                <input type="checkbox" class="checkbox__input" checked="">
                                 <span class="checkbox__icon">
                                   <i class="material-icons checkbox__icon-in">check</i>
                                 </span>
@@ -506,6 +511,29 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup_removal">
+        <div class="popup__content">
+          <h2 class="popup__title title-lg">Confirm removal from Watchlist?</h2>
+          <ul class="list-caret">
+            <li class="list-caret__item">
+              <i class="material-icons">chevron_right</i>
+              <p class="list-caret__desc">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</p>
+            </li>
+            <li class="list-caret__item">
+              <i class="material-icons">chevron_right</i>
+              <p class="list-caret__desc">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</p>
+            </li>
+            <li class="list-caret__item">
+              <i class="material-icons">chevron_right</i>
+              <p class="list-caret__desc">CIBC Canadian Infrastructure Autocallable Deposit Notes, Series 3 (F-class)</p>
+            </li>
+          </ul>
+          <div class="form-group__row">
+            <a href="#" class="btn">Remove</a>
+            <a href="#" class="btn btn_blue-transparent">Cancel</a>
           </div>
         </div>
       </div>

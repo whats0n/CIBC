@@ -21,6 +21,8 @@ PageList:
   ready: 50
 - file: notes-watchlist-selected.html
   ready: 50
+- file: notes-watchlist-selected-removal.html
+  ready: 50
 - file: notes-watchlist.html
   ready: 50
 - file: notes.html
