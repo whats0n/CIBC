@@ -1,5 +1,12 @@
 .form-group
 	font-size: 0
+	&__checkbox
+		font-size: 0
+		margin-top: 15px
+		.label
+			+f(14px, 700, 1)
+			font-family: $familySecondary
+			margin-left: 14px
 	&__label
 		display: block
 		+f(14px, 700, 1)
@@ -16,6 +23,8 @@
 		+placeholder-color(#6F6F6F)
 		&.input_bordered
 			border: 1px solid #cccccc
+		&.is-error
+			border-color: $red
 	&__row
 		font-size: 0
 		margin: 0 -5px
@@ -55,8 +64,6 @@
 			transition: background-color .30s
 		+hover
 			background-color: #E6E6E6
-			&:after
-				background-color: $gray
 			.icon, i
 				fill: $gray
 				color: $gray

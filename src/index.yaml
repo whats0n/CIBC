@@ -3,6 +3,8 @@ ProjectTitle: cibc
 PageList:
 - file: page.html
   ready: 50
+- file: page-login.html
+  ready: 50
 - file: education.html
   ready: 50
 - file: compares.html

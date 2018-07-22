@@ -70,7 +70,9 @@
 
 {% macro select(props) %}
 <div class="form-group">
-	<label class="form-group__label">{{props.label}}</label>
+	{% if props.label %}
+		<label class="form-group__label">{{props.label}}</label>
+	{% endif %}
 	<div class="select {{props.classList}}">
 		<select class="select__control">
 			{% for item in props.options %}
