@@ -1,0 +1,79 @@
+---
+title: Section page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="section">
+		<div class="section__wrapper">
+			<h2 class="section__title">Reset Password</h2>
+			<div class="section__content">
+				<form action="/" class="form">
+					<h3 class="section__subtitle title-md">Request to reset password</h3>
+					<p class="section__desc">Please enter your email address. We’ll send you a link to reset your password.</p>
+					<div class="form-group">
+						<label for="" class="form-group__label">Email address associated with account</label>
+						<input type="email" class="form-group__input" required="">
+					</div>
+					<button class="btn section__btn" type="submit">Reset Password</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="section__wrapper">
+			<h2 class="section__title">Reset Password</h2>
+			<div class="section__content">
+				<form action="/" class="form">
+					<h3 class="section__subtitle title-md">Request to reset password</h3>
+					<p class="section__desc">If an account is associated with this email address, a link will be sent to to reset your password.</p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="section__wrapper">
+			<h2 class="section__title">Set a New Password</h2>
+			<div class="section__content">
+				<form action="/" class="form">
+					<h3 class="section__subtitle title-md">G Raymond</h3>
+					<div class="form-group">
+						<label for="" class="form-group__label">New password</label>
+						<input type="password" class="form-group__input" required="">
+					</div>
+					<div class="form-group">
+						<label for="" class="form-group__label">Repeat new password</label>
+						<input type="password" class="form-group__input" required="">
+					</div>
+					<button class="btn section__btn" type="submit">Set New Password</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+		<div class="section">
+		<div class="section__wrapper">
+			<h2 class="section__title">Reset Password</h2>
+
+			<div class="section__content">
+				<form action="/" class="form">
+					<h3 class="section__subtitle title-md">G Raymond</h3>
+					<div class="form-group">
+						<label for="" class="form-group__label">New password</label>
+						<input type="password" class="form-group__input is-error" required="">
+					</div>
+					<div class="form-group">
+						<label for="" class="form-group__label">Repeat new password</label>
+						<input type="password" class="form-group__input is-error" required="">
+					</div>
+					<button class="btn section__btn" type="submit">Set New Password</button>
+				</form>
+
+				<p class="section__desc color-red">Your new password was not accepted. </p>
+				<p class="section__desc color-red">Your password does not contain a special character. Please ensure your password is 10 characters or longer, and contains at least one number and one special character.</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

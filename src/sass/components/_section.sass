@@ -1,0 +1,36 @@
+.section
+	background-color: #EEE
+	padding: 40px 0 55px
+	&:not(:last-child)
+		border-bottom: 2px solid $white
+	&__title
+		+f(28px, 400, normal)
+		margin-bottom: 30px
+		color: $black
+	&__subtitle
+		margin-bottom: 25px
+		color: $gray
+	&__wrapper
+		max-width: 380px
+		width: 100%
+		margin: 0 auto
+		text-align: center
+	&__content
+		padding: 20px
+		background-color: $white
+		text-align: left
+		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2)
+		.form-group
+			margin-top: 25px
+	&__desc
+		color: $gray
+		+f(16px, 400, normal)
+		&.color-red
+			color: $red
+		&.color-red:not(:last-child)
+			margin: 40px 0 25px
+	&__form
+		margin-top: 30px
+	&__btn
+		width: 100%
+		margin-top: 10px
