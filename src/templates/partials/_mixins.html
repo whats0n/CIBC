@@ -45,7 +45,7 @@
 		{% if props.list %}
 			<ul class="card__list">
 				{% for item in props.list %}
-					<li>{{item}}</li>
+					<li class="card__listItem">{{item}}</li>
 				{% endfor %}
 			</ul>
 		{% endif %}
@@ -90,9 +90,14 @@
 		<label class="form-group__label">{{props.label | safe}}</label>
 	{% endif %}
 	{% if props.group %}
-		<div class="form-group__row">
+		<div class="form-group__row {{props.rowClassList}}">
 			{% for item in props.group %}
-				<div class="form-group__col">
+				<div class="form-group__col {{props.classList}}">
+					{% if item.icon %}
+						<i class="form-group__icon">
+							<svg class="icon icon-date"><use xlink:href="img/sprite.svg#icon-date"></use></svg>
+						</i>
+					{% endif %}
 					{% if item.label %}
 						<label class="form-group__label">{{item.label | safe}}</label>
 					{% endif %}
@@ -112,12 +117,12 @@
 			{% endfor %}
 		</div>
 	{% elif props.bordered %}
-		<div class="form-group__row form-group_navigate">
-				<button type="buton" class="input__btn navigate_btn">
+		<div class="form-group__row form-group__row_navigate">
+				<button type="buton" class="input__btn input__btn_navigate">
 					<i class="material-icons">chevron_left</i>
 				</button>
 				<input class="form-group__input" type="text" placeholder="This Month">
-				<button type="buton" class="input__btn navigate_btn"><i class="material-icons">chevron_right</i></button>
+				<button type="buton" class="input__btn input__btn_navigate"><i class="material-icons">chevron_right</i></button>
 		</div>
 	{% else %}
 		<input class="form-group__input {{props.classList}}" type="{{props.type}}" placeholder="{{props.placeholder}}">

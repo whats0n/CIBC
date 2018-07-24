@@ -1,34 +1,38 @@
 .notes
+	position: relative
+	z-index: 1
+	background-color: #A0D0E7
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: 100% 50%
+	background-image: url("../img/notes.jpg")
 	&__container
-		position: relative
 		padding: 58px 0 23px
 		margin: 0 auto
 		max-width: 1366px
 		color: $white
-		+cover
-		&:before
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			opacity: 0.7
-			background: $black
 	&__row
 		margin: 0 -8px
 		+clr
+	&__rowContainer
+		position: relative
 	&__col
 		float: left
 		padding: 8px
 		width: 33.33%
+	&__subtitle,
+	&__title
+		color: $gray
 	&__title
 		margin-bottom: 13px
 	&__subtitle
 		margin-bottom: 37px
 	&__nav
-		margin: 0 -10px
 		+clr
+		position: absolute
+		width: calc(100% + 72px)
+		top: calc(50% - 18px)
+		left: -36px
 	&__prev
 		float: left
 	&__next

@@ -1,42 +1,44 @@
 <!-- begin notes -->
 <div class="notes">
-	<div class="notes__container" style="background-image: url(img/notes.jpg);">
+	<div class="notes__container">
 		<div class="inner notes__inner">
 			<h2 class="title-lg notes__title">Notes You Might Like</h2>
 			<h2 class="title-lg title-lg_regular notes__subtitle">Lorem ipsum dolor sit amet, conse, sed diam nonummy nibh.</h2>
-			<div class="notes__row">
-				{% for item in [
-					{
-						label: 'Available until April 13, 2018',
-						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
-						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
-						link: 'See Note details'
-					},
-					{
-						label: 'Available until April 13, 2018',
-						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
-						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
-						link: 'See Note details'
-					},
-					{
-						label: 'Available until April 13, 2018',
-						title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
-						list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
-						link: 'See Note details'
-					}
-				] %}
-					<div class="notes__col">
-						{{mixins.card(item)}}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="notes__nav">
-				<button class="notes__prev">
-					<i class="material-icons">chevron_left</i>
-				</button>
-				<button class="notes__next">
-					<i class="material-icons">chevron_right</i>
-				</button>
+			<div class="notes__rowContainer">
+				<div class="notes__row">
+					{% for item in [
+						{
+							label: 'Available until April 13, 2018',
+							title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+							list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+							link: 'See Note details'
+						},
+						{
+							label: 'Available until April 13, 2018',
+							title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+							list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+							link: 'See Note details'
+						},
+						{
+							label: 'Available until April 13, 2018',
+							title: 'CIBC Autocallable Notes linked to BCE Inc., Series 1',
+							list: [ 'Annual Autocall Feature', '25.00% Contingent Principal Protection', 'Year one Fixed Return 9.00%' ],
+							link: 'See Note details'
+						}
+					] %}
+						<div class="notes__col">
+							{{mixins.card(item)}}
+						</div>
+					{% endfor %}
+				</div>
+				<div class="notes__nav">
+					<button class="notes__prev">
+						<i class="material-icons">chevron_left</i>
+					</button>
+					<button class="notes__next">
+						<i class="material-icons">chevron_right</i>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

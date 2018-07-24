@@ -37,6 +37,39 @@
               </li>
               <li class="header__item">
                 <a href="#" class="link header__link">Sign On</a>
+                <div class="popup popup_login">
+                  <div class="popup__content">
+                    <form action="/" class="form">
+                      <div class="form-group">
+                        <label class="form-group__label">Username</label>
+                        <input class="form-group__input" type="text" placeholder="">
+                        <div class="form-group__checkbox">
+                          <input type="checkbox" class="input__checkbox" id="checkboxLogin">
+                          <label for="checkboxLogin" class="input__label">Remember my username</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label">Password</label>
+                        <input class="form-group__input" type="password" placeholder=""> </div>
+                      <div class="form-group">
+                        <a href="#" class="link">Forgot your password?</a>
+                        <div class="form-group__row">
+                          <div class="form-group__col">
+                            <a href="#" class="btn btn_gray-transparent">Register</a>
+                          </div>
+                          <div class="form-group__col">
+                            <a href="#" class="btn">Sign On</a>
+                          </div>
+                        </div>
+                        <a href="#" class="link link_icon">
+                          <svg class="icon icon-shield">
+                            <use xlink:href="img/sprite.svg#icon-shield"></use>
+                          </svg> Security guaranteed</a>
+                        <a href="#" class="link">Electronic access agreement</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </li>
             </ul>
             <div class="search header__search">
@@ -69,13 +102,13 @@
       </header>
       <!-- end header -->
       <!-- begin hero -->
-      <div class="hero ">
-        <div class="hero__container" style="background-image: url(img/hero.jpg);">
+      <div class="hero hero--home">
+        <div class="hero__container">
           <div class="inner hero__inner">
             <div class="hero__content">
               <div class="hero__content-in">
-                <div class="hero__info">
-                  <h2 class="title-lg hero__title">Lorem ipsum dolor sit amet consectetuer adipiscing</h2>
+                <div class="hero__info ">
+                  <h2 class="title-lg hero__title ">Lorem ipsum dolor sit amet consectetuer adipiscing</h2>
                   <a href="#" class="btn hero__btn">Register Today</a>
                 </div>
               </div>
@@ -203,39 +236,6 @@
         </div>
       </div>
       <!-- end items -->
-      <div class="popup_login">
-        <div class="popup__content">
-          <form action="/" class="form">
-            <div class="form-group">
-              <label class="form-group__label">Username</label>
-              <input class="form-group__input" type="text" placeholder=""> </div>
-            <div class="form-group">
-              <label class="form-group__label">Password</label>
-              <input class="form-group__input" type="password" placeholder="">
-              <div class="form-group__checkbox">
-                <input type="checkbox" class="input__checkbox" id="checkboxLogin">
-                <label for="checkboxLogin" class="input__label">Remember my username</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <a href="#" class="link">Forgot your password?</a>
-              <div class="form-group__row">
-                <div class="form-group__col">
-                  <a href="#" class="btn btn_gray-transparent">Register</a>
-                </div>
-                <div class="form-group__col">
-                  <a href="#" class="btn">Sign On</a>
-                </div>
-              </div>
-              <a href="#" class="link link_icon">
-                <svg class="icon icon-shield">
-                  <use xlink:href="img/sprite.svg#icon-shield"></use>
-                </svg> Security guaranteed</a>
-              <a href="#" class="link">Electronic access agreement</a>
-            </div>
-          </form>
-        </div>
-      </div>
       <!-- begin footer -->
       <footer class="footer">
         <div class="inner footer__inner">

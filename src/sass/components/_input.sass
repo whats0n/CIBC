@@ -1,4 +1,10 @@
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator
+	display: none
+	-webkit-appearance: none
+
 .form-group
+	overflow: hidden
 	font-size: 0
 	&__checkbox
 		font-size: 0
@@ -17,6 +23,7 @@
 		+f(14px, 700, 1)
 		font-family: $familySecondary
 		margin-bottom: 8px
+		color: #777
 	&__input
 		border: 1px solid #cccccc
 		padding: 8px 16px
@@ -33,17 +40,44 @@
 	&__row
 		font-size: 0
 		margin: 0 -5px
-		&.form-group_navigate
-			margin: 0
-			border-bottom: 2px solid #E6E6E6
-			.form-group__input
-				max-width: 120px
-				vertical-align: top
+		&.form-group__row
+			&_bordered
+				position: relative
+				&:after
+					content: ""
+					position: absolute
+					top: 50%
+					left: 0
+					height: 1px
+					width: 100%
+					background-color: #cccccc
+			&_navigate
+				margin: 0
+				border-bottom: 2px solid #E6E6E6
+				.form-group__input
+					max-width: 120px
+					vertical-align: top
 	&__col
 		width: 50%
 		display: inline-block
 		vertical-align: top
 		padding: 0 5px
+		&.form-group__col_icon
+			position: relative
+			overflow: hidden
+			z-index: 10
+			.form-group__input
+				padding: 8px 36px 8px 16px
+	&__icon
+		position: absolute
+		top: 50%
+		right: 16px
+		display: flex
+		transform: translateY(-50%)
+		font-size: 18px
+		color: #6F6F6F
+	&__icon svg
+		fill: currentColor
 
 
 .input
@@ -56,6 +90,12 @@
 		font-size: 16px
 		border: 1px solid #cccccc
 		cursor: pointer
+		&.input__btn_navigate:after
+			display: none
+		&.input__btn_navigate:first-child
+			border-right: none
+		&.input__btn_navigate:last-child
+			border-left: none
 		&:after
 			content: ''
 			display: block

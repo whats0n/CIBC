@@ -16,12 +16,20 @@
 		bottom: 0
 		border: 1px solid #D6D6D6
 		width: 40px
-		color: $gray
+		color: #a2a2a2
 		background: $white
 		font-size: 0
-		transition: background 0.3s
+		transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out
+		&:focus,
+		&:hover
+			background: #007095
+			color: $white
+		&:focus
+			outline: 2px solid #808080
+			border: none
 		+hover
-			background: #dedede
+			color: #666666
+			background: $white
 	&__icon
 		display: inline-block
 		vertical-align: middle

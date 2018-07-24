@@ -1,6 +1,40 @@
 .hero
 	background-color: #F5F5F5
 	position: relative
+	z-index: 1
+	&.hero--home
+		background-color: #CED3D7
+		&:before
+			background-image: url("../img/hero.jpg")
+	&.hero--education
+		background-color: $white
+		&:before
+			background-image: url("../img/education.jpg")
+	&.hero--education-page
+		background-color: $white
+		&:before
+			background-image: url("../img/bg-hero-education.jpg")
+			background-position: 50% 0%
+	&.hero--question
+		background-color: $white
+		&:before
+			background-image: url("../img/bg-hero-question.jpg")
+	&.hero--publications
+		background-color: $white
+		&:before
+			background-image: url("../img/bg-hero-publications.jpg")
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		height: 100%
+		width: 100%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		max-width: 1366px
 	&_sm
 		.hero
 			&__info
@@ -22,11 +56,13 @@
 		+f(18px, 400, 1.2)
 		color: $gray
 		margin-bottom: 30px
+		&.desc-full
+			max-width: 100%
 	&__container
 		position: relative
 		margin: 0 auto
 		max-width: 1366px
-		+cover
+		z-index: 2
 	&__content
 		display: table
 		width: 100%
@@ -37,8 +73,13 @@
 		vertical-align: middle
 		padding: 40px
 		height: 420px
+		&.hero__info--question
+			position: relative
+			bottom: 50px
 	&__title
 		max-width: 350px
 		color: $gray
 		&:not(:last-child)
 			margin-bottom: 40px
+		&.title-full
+			max-width: 100%

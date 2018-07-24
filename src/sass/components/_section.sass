@@ -22,13 +22,18 @@
 		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2)
 		.form-group
 			margin-top: 25px
+		.form-group__label
+			color: #777
 	&__desc
 		color: $gray
 		+f(16px, 400, normal)
+		&.font-bolder
+			font-weight: 700
 		&.color-red
 			color: $red
+			font-style: italic
 		&.color-red:not(:last-child)
-			margin: 40px 0 25px
+			margin: 40px 0 20px
 	&__form
 		margin-top: 30px
 	&__btn

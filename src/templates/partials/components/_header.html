@@ -23,7 +23,42 @@
 					{ title: 'Contact Us' },
 					{ title: 'Sign On' }
 				] %}
-					<li class="header__item"><a href="#" class="link header__link">{{item.title}}</a></li>
+					<li class="header__item">
+						<a href="#" class="link header__link">{{item.title}}</a>
+						{% if header.hasModalLogin and loop.last%}
+							<div class="popup popup_login">
+								<div class="popup__content">
+									<form action="/" class="form">
+										<div class="form-group">
+											<label class="form-group__label">Username</label>
+											<input class="form-group__input" type="text" placeholder="">
+											<div class="form-group__checkbox">
+												<input type="checkbox" class="input__checkbox" id	="checkboxLogin">
+												<label for="checkboxLogin" class="input__label">Remember my username</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="form-group__label">Password</label>
+											<input class="form-group__input" type="password" placeholder="">
+										</div>
+										<div class="form-group">
+											<a href="#" class="link">Forgot your password?</a>
+											<div class="form-group__row">
+												<div class="form-group__col">
+													<a href="#" class="btn btn_gray-transparent">Register</a>
+												</div>
+												<div class="form-group__col">
+													<a href="#" class="btn">Sign On</a>
+												</div>
+											</div>
+											<a href="#" class="link link_icon">{{mixins.icon('shield')}}Security guaranteed</a>
+											<a href="#" class="link">Electronic access agreement</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						{% endif %}
+					</li>
 				{% endfor %}
 			</ul>
 			<div class="search header__search">
